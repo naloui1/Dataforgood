@@ -9,15 +9,16 @@ st.set_page_config(
     page_title="Carte Culturelle de France",
     page_icon="🎭",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
 )
 
 # Theme handling
-if 'dark_theme' not in st.session_state:
+if "dark_theme" not in st.session_state:
     st.session_state.dark_theme = False
 
 # Custom CSS for the theme toggle
-st.markdown("""
+st.markdown(
+    """
     <style>
         /* Hide the default checkbox */
         .stCheckbox {
@@ -60,11 +61,14 @@ st.markdown("""
             line-height: 1;
         }
     </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 # Update the theme
 if st.session_state.dark_theme:
-    st.markdown("""
+    st.markdown(
+        """
         <style>
             /* Main app background */
             .stApp, .stSidebar, [data-testid="stHeader"] {
@@ -159,13 +163,17 @@ if st.session_state.dark_theme:
                 background-color: #4B4B4B;
             }
         </style>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
+
 
 # Load the data
 @st.cache_data
 def load_data():
     df = pd.read_csv("data/mock_cultural_data.csv")
     return df
+
 
 # Create the map
 def create_map(
@@ -177,7 +185,7 @@ def create_map(
 ):
     # Set bounds for France
     sw = [41.333, -4.833]  # Southwest corner
-    ne = [51.2, 9.833]     # Northeast corner
+    ne = [51.2, 9.833]  # Northeast corner
 
     # If a commune is selected, center on it, otherwise center on France
     if selected_commune:
@@ -223,7 +231,7 @@ def create_map(
     # Define colors for categories based on theme
     category_colors = {
         "patrimoine": "lightblue" if dark_mode else "blue",
-        "spectacle_vivant": "orange" if dark_mode else "red"
+        "spectacle_vivant": "orange" if dark_mode else "red",
     }
 
     # Create a marker cluster
@@ -232,9 +240,13 @@ def create_map(
     # Filter data based on selections
     filtered_data = data.copy()
     if selected_categories:
-        filtered_data = filtered_data[filtered_data["categorie"].isin(selected_categories)]
+        filtered_data = filtered_data[
+            filtered_data["categorie"].isin(selected_categories)
+        ]
     if selected_types:
-        filtered_data = filtered_data[filtered_data["type_infrastructure"].isin(selected_types)]
+        filtered_data = filtered_data[
+            filtered_data["type_infrastructure"].isin(selected_types)
+        ]
     if selected_commune:
         filtered_data = filtered_data[filtered_data["nom_commune"] == selected_commune]
 
@@ -265,9 +277,9 @@ def create_map(
 def main():
     # Create a layout with two columns
     left_col, right_col = st.columns([11, 1])
-    
+
     with left_col:
-        st.title("🎭 Carte des Infrastructures Culturelles en France")
+        st.title("🎭 Carte de la culture dans les petites villes de France")
 
     with right_col:
         if st.session_state.dark_theme:
@@ -334,7 +346,7 @@ def main():
         selected_categories,
         selected_types,
         selected_commune,
-        st.session_state.dark_theme
+        st.session_state.dark_theme,
     )
     folium_static(map_obj, width=1200, height=600)
 

@@ -1,4 +1,4 @@
-# Carte des Infrastructures Culturelles en France 🎭
+# Carte de la culture dans les petites villes de France 🎭
 
 Une application interactive pour visualiser et explorer les infrastructures culturelles à travers la France, développée dans le cadre du projet "Revitalisation des petites villes" de Data For Good.
 
