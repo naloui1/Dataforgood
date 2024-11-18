@@ -2,10 +2,8 @@
 notebooks/
     ... 
 src/
-    data/
-        consomation_gaz/
-            ...
-        production_elec/
-            ...
+    data_basilics/
+    data_cinema/
+    data_festivals/
     functions/
         ...
