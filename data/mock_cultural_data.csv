@@ -1,0 +1,69 @@
+nom_commune,code_postal,code_insee,type_infrastructure,categorie,nom_infrastructure,latitude,longitude
+Saint-Rémy-de-Provence,13210,13100,musée,patrimoine,Musée des Alpilles,43.7885,4.8313
+Saint-Rémy-de-Provence,13210,13100,monument,patrimoine,Site Archéologique de Glanum,43.7741,4.8312
+Saint-Rémy-de-Provence,13210,13100,festival,spectacle_vivant,Festival d'Art Contemporain,43.7889,4.8319
+Conques,12320,12076,eglise,patrimoine,Abbatiale Sainte-Foy,44.5990,2.3987
+Conques,12320,12076,musée,patrimoine,Musée Joseph-Fau,44.5988,2.3989
+Conques,12320,12076,monument,patrimoine,Pont Romain,44.5995,2.3979
+Giverny,27620,27285,musée,patrimoine,Maison et Jardins de Claude Monet,49.0753,1.5341
+Giverny,27620,27285,musée,patrimoine,Musée des Impressionnismes,49.0747,1.5334
+Giverny,27620,27285,festival,spectacle_vivant,Festival des Jardins,49.0751,1.5339
+Collioure,66190,66053,festival,spectacle_vivant,Festival des Arts de Collioure,42.5270,3.0809
+Collioure,66190,66053,monument,patrimoine,Château Royal de Collioure,42.5244,3.0833
+Collioure,66190,66053,musée,patrimoine,Musée d'Art Moderne,42.5268,3.0804
+Collioure,66190,66053,eglise,patrimoine,Notre-Dame-des-Anges,42.5255,3.0847
+Auvers-sur-Oise,95430,95039,musée,patrimoine,Maison de Van Gogh,49.0709,2.1708
+Auvers-sur-Oise,95430,95039,musée,patrimoine,Musée Daubigny,49.0704,2.1715
+Auvers-sur-Oise,95430,95039,eglise,patrimoine,Église Notre-Dame de l'Assomption,49.0702,2.1701
+Auvers-sur-Oise,95430,95039,festival,spectacle_vivant,Festival d'Auvers-sur-Oise,49.0707,2.1706
+Sarlat-la-Canéda,24200,24520,théâtre,spectacle_vivant,Théâtre de Poche,44.8884,1.2167
+Sarlat-la-Canéda,24200,24520,festival,spectacle_vivant,Festival des Jeux du Théâtre,44.8889,1.2172
+Sarlat-la-Canéda,24200,24520,cinéma,spectacle_vivant,Cinéma Rex,44.8881,1.2169
+Sarlat-la-Canéda,24200,24520,monument,patrimoine,Cathédrale Saint-Sacerdos,44.8876,1.2171
+Rocamadour,46500,46240,monument,patrimoine,Sanctuaire de Rocamadour,44.7990,1.6178
+Rocamadour,46500,46240,eglise,patrimoine,Chapelle Notre-Dame,44.7988,1.6181
+Rocamadour,46500,46240,musée,patrimoine,Musée d'Art Sacré,44.7992,1.6176
+Uzès,30700,30334,cinéma,spectacle_vivant,Cinéma Le Capitole,44.0121,4.4196
+Uzès,30700,30334,monument,patrimoine,Duché d'Uzès,44.0124,4.4199
+Uzès,30700,30334,festival,spectacle_vivant,Festival de la Danse,44.0119,4.4193
+Uzès,30700,30334,musée,patrimoine,Musée Georges Borias,44.0126,4.4201
+Vézelay,89450,89446,eglise,patrimoine,Basilique Sainte-Marie-Madeleine,47.4665,3.7485
+Vézelay,89450,89446,musée,patrimoine,Musée Zervos,47.4668,3.7482
+Vézelay,89450,89446,festival,spectacle_vivant,Festival de Musique Sacrée,47.4663,3.7488
+Gordes,84220,84051,festival,spectacle_vivant,Festival de Musique des Terrasses,43.9115,5.2002
+Gordes,84220,84051,monument,patrimoine,Château de Gordes,43.9118,5.2005
+Gordes,84220,84051,musée,patrimoine,Musée du Village des Bories,43.9112,5.1999
+Honfleur,14600,14333,musée,patrimoine,Musée Eugène Boudin,49.4187,-0.2327
+Honfleur,14600,14333,eglise,patrimoine,Église Sainte-Catherine,49.4189,-0.2331
+Honfleur,14600,14333,cinéma,spectacle_vivant,Cinéma Henri Jeanson,49.4185,-0.2324
+Honfleur,14600,14333,festival,spectacle_vivant,Festival du Cinema Russe,49.4183,-0.2329
+Aigues-Mortes,30220,30003,monument,patrimoine,Tours et Remparts,43.5667,4.1833
+Aigues-Mortes,30220,30003,musée,patrimoine,Musée des Tours et Remparts,43.5665,4.1835
+Aigues-Mortes,30220,30003,festival,spectacle_vivant,Festival des Cultures Méditerranéennes,43.5669,4.1831
+Beaune,21200,21054,théâtre,spectacle_vivant,Théâtre de Beaune,47.0242,4.8373
+Beaune,21200,21054,monument,patrimoine,Hospices de Beaune,47.0239,4.8371
+Beaune,21200,21054,musée,patrimoine,Musée du Vin,47.0245,4.8376
+Beaune,21200,21054,festival,spectacle_vivant,Festival International du Film Policier,47.0241,4.8375
+Carcassonne,11000,11069,festival,spectacle_vivant,Festival de Carcassonne,43.2130,2.3491
+Carcassonne,11000,11069,monument,patrimoine,Cité Médiévale,43.2067,2.3642
+Carcassonne,11000,11069,musée,patrimoine,Musée des Beaux-Arts,43.2128,2.3489
+Carcassonne,11000,11069,théâtre,spectacle_vivant,Théâtre Jean-Deschamps,43.2065,2.3644
+Provins,77160,77379,monument,patrimoine,Tour César,48.5604,3.2989
+Provins,77160,77379,théâtre,spectacle_vivant,Théâtre du Provinois,48.5601,3.2992
+Provins,77160,77379,festival,spectacle_vivant,Médiévales de Provins,48.5607,3.2986
+Moustiers-Sainte-Marie,04360,04135,musée,patrimoine,Musée de la Faïence,43.8456,6.2219
+Moustiers-Sainte-Marie,04360,04135,eglise,patrimoine,Notre-Dame de l'Assomption,43.8458,6.2221
+Moustiers-Sainte-Marie,04360,04135,monument,patrimoine,Chapelle Notre-Dame de Beauvoir,43.8454,6.2217
+Locronan,29180,29134,festival,spectacle_vivant,Festival des Arts Traditionnels,48.0978,-4.2075
+Locronan,29180,29134,eglise,patrimoine,Église Saint-Ronan,48.0981,-4.2078
+Locronan,29180,29134,musée,patrimoine,Musée d'Art et d'Histoire,48.0976,-4.2073
+Saint-Guilhem-le-Désert,34150,34261,eglise,patrimoine,Abbaye de Gellone,43.7339,3.5503
+Saint-Guilhem-le-Désert,34150,34261,musée,patrimoine,Musée du Village,43.7341,3.5505
+Saint-Guilhem-le-Désert,34150,34261,festival,spectacle_vivant,Festival de Musique Ancienne,43.7337,3.5501
+Riquewihr,68340,68277,cinéma,spectacle_vivant,Cinéma Le Riquewihrien,48.1678,7.2956
+Riquewihr,68340,68277,musée,patrimoine,Musée du Dolder,48.1675,7.2953
+Riquewihr,68340,68277,monument,patrimoine,Tour des Voleurs,48.1681,7.2959
+Riquewihr,68340,68277,festival,spectacle_vivant,Festival des Vins d'Alsace,48.1677,7.2955
+Salers,15140,15220,musée,patrimoine,Musée de Salers,45.1375,2.4944
+Salers,15140,15220,monument,patrimoine,Beffroi de Salers,45.1378,2.4947
+Salers,15140,15220,festival,spectacle_vivant,Festival de Musique Traditionnelle,45.1373,2.4941

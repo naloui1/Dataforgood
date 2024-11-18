@@ -2,7 +2,6 @@
 
 https://defis.data.gouv.fr/defis/revitalisation-des-petites-villes
 
-
 **Contexte du projet**
 
 Les “petites villes” sont essentielles à la vie des habitants, surtout dans les territoires ruraux :  accès aux soins, aux commerces, aux administrations, services, accès à la culture et au patrimoine, etc.
@@ -10,7 +9,6 @@ Les “petites villes” sont essentielles à la vie des habitants, surtout dans
 Depuis 2020, elles font l’objet d’un accompagnement spécifique de la part de l’Etat à travers le programme Petites Villes de Demain (PVD) porté par l’Agence Nationale de la Cohésion des Territoires (ANCT) et la Banque des Territoires. Le programme permet aux élus et acteurs locaux de bénéficier de ressources pour améliorer le cadre de vie de leurs habitants et mettre en œuvre des projets de revitalisation.
 
 La définition de ce qu’est une “petite ville” pose question. Le programme accompagne les villes de moins de 20 000 habitants qui jouent un rôle de centralité sur leur bassin de vie, c’est-à-dire qui exercent un certain nombre de fonctions (administratives, économiques, commerciales, etc.).
-Pour en savoir plus sur la catégorisation des petites centralités.
 
 1 645 villes sont bénéficiaires, de Neuves-Maisons en Meurthe-et-Moselle (54) au Grau-du-Roi (30) dans le Gard en passant par Bréhal dans la Manche (50). La Banque des Territoires accompagne les territoires de plusieurs façons. A titre d’exemple, les communes peuvent bénéficier de l’aide de professionnels de la Banque des Territoires pour réaliser une stratégie foncière et immobilière.
 
@@ -54,6 +52,15 @@ L’objet du défi est d’enrichir l’outil Dataviz PVD de plusieurs autres an
     5. Énergies renouvelables. Vous pouvez réaliser plusieurs analyses et cartographies sur la production d’énergie renouvelable sur la commune. Vous pouvez compléter ces analyses par celles sur la consommation d’électricité et d’énergie. Il est intéressant de mettre au regard ces analyses avec la production à l’échelle régionale. Par exemple, vous pouvez réaliser une carte interactive avec les éoliennes installées sur la commune, ainsi que leur production d’électricité en 2023.
 
 Vous pouvez réaliser un tableau de bord interactif qui centralise les données territoriales (les différentes thématiques) afin de les restituer de manière simplifiée aux élus et acteurs du territoire. Le tableau de bord peut être publié sur un site accessible en ligne.
+
+**Lancement de l'application**
+
+Pour lancer l'application, exécutez la commande suivante :
+```bash
+streamlit run app.py
+```
+
+L'application sera accessible dans votre navigateur à l'adresse : http://localhost:8501
 
 **Ce défi est-il pour moi ?**
 
@@ -100,3 +107,76 @@ Si vous le souhaitez, un environnement de travail déjà configuré sur le Datal
 Le Datalab « SSP Cloud » est une plateforme mutualisée de traitement de données mise en œuvre par l’INSEE. Il propose un ensemble de services destinés aux traitements statistiques de données ainsi qu’à la gestion complète des projets de datascience. Pour en savoir plus, nous vous invitons à consulter la documentation du SSP Cloud.
 
 Cette plateforme est ouverte aux agents publics ainsi qu’aux enseignants et étudiants d’universités publiques et du Groupe des écoles nationales d’économie et de statistique. Pour y accéder, il suffit de s’inscrire avec son adresse mail professionnelle, d’université ou d’école.
+
+**Carte des Infrastructures Culturelles en France 🎭**
+
+Une application interactive pour visualiser et explorer les infrastructures culturelles à travers la France, développée dans le cadre du projet "Revitalisation des petites villes" de Data For Good.
+
+## 🚀 Démarrage Rapide
+
+1. Cloner le dépôt et accéder au répertoire :
+```bash
+git clone [URL_DU_REPO]
+cd Dataforgood
+```
+
+2. Créer et activer l'environnement virtuel :
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# ou
+.venv\Scripts\activate     # Windows
+```
+
+3. Installer les dépendances :
+```bash
+pip install -r requirements.txt
+```
+
+4. Lancer l'application :
+```bash
+streamlit run app.py
+```
+
+L'application sera accessible à l'adresse : http://localhost:8501
+
+## 🎯 Fonctionnalités
+
+- **Carte Interactive** : Visualisation des sites culturels avec clustering
+- **Filtres Dynamiques** :
+  - Recherche par commune
+  - Filtrage par type d'infrastructure
+  - Filtrage par catégorie culturelle
+- **Interface Adaptative** :
+  - Mode sombre/clair
+  - Statistiques en temps réel
+  - Zoom intelligent sur les communes
+
+## 📊 Données
+
+Les données (`data/mock_cultural_data.csv`) incluent :
+- Nom et code postal des communes
+- Types d'infrastructures culturelles
+- Catégories (patrimoine, spectacle vivant)
+- Coordonnées géographiques
+
+## 🔧 Technologies
+
+- Python
+- Streamlit
+- Folium
+- Pandas
+- Streamlit-Folium
+
+## 📝 Contexte du Projet
+
+Ce projet s'inscrit dans l'initiative "Revitalisation des petites villes" de Data For Good, visant à enrichir l'outil Dataviz PVD de la Banque des Territoires. Il se concentre spécifiquement sur l'analyse et la visualisation de l'offre culturelle dans les petites villes françaises.
+
+Les "petites villes" sont essentielles à la vie des habitants, surtout dans les territoires ruraux, notamment pour l'accès à la culture et au patrimoine. Le programme Petites Villes de Demain (PVD) accompagne les villes de moins de 20 000 habitants qui jouent un rôle de centralité sur leur bassin de vie.
+
+Cette application fait partie des outils développés pour aider à :
+- Visualiser la répartition des infrastructures culturelles
+- Analyser l'accessibilité des équipements culturels
+- Comprendre les spécificités culturelles de chaque territoire
+
+Pour plus d'informations sur le projet global : https://defis.data.gouv.fr/defis/revitalisation-des-petites-villes
