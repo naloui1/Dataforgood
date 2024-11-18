@@ -10,3 +10,7 @@ tptp.ipynb
 hello.py
 # Virtual environments
 .venv
+
+# FOLDERS DATA
+src/production_elec
+src/consomation_gaz
