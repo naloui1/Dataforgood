@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+tptp.ipynb
+hello.py
+# Virtual environments
+.venv
+
+# FOLDERS DATA
+src/production_elec
+src/consomation_gaz
