@@ -249,9 +249,10 @@ dependencies = [
     { name = "folium" },
     { name = "ipykernel" },
     { name = "matplotlib" },
-    { name = "openpyxl" },
+    { name = "numpy" },
     { name = "pandas" },
     { name = "streamlit" },
+    { name = "streamlit-folium" },
 ]
 
 [package.metadata]
@@ -259,9 +260,10 @@ requires-dist = [
     { name = "folium", specifier = ">=0.18.0" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "matplotlib", specifier = ">=3.9.2" },
-    { name = "openpyxl", specifier = ">=3.1.5" },
+    { name = "numpy", specifier = ">=2.1.3" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "streamlit", specifier = ">=1.40.1" },
+    { name = "streamlit-folium", specifier = ">=0.23.2" },
 ]
 
 [[package]]
@@ -1173,6 +1175,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/80/70/b76a32201b04a5a2a1c667fe7327cb7a3cc25d726d3863ba5863d2b0dccf/streamlit-1.40.1.tar.gz", hash = "sha256:1f2b09f04b6ad366a2c7b4d48104697d1c8bc33f48bdf7ed939cc04c12d3aec6", size = 8266452 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9a/14/857d0734989f3d26f2f965b2e3f67568ea7a6e8a60cb9c1ed7f774b6d606/streamlit-1.40.1-py2.py3-none-any.whl", hash = "sha256:b9d7a317a0cc88edd7857c7e07dde9cf95647d3ae51cbfa8a3db82fbb8a2990d", size = 8645398 },
+]
+
+[[package]]
+name = "streamlit-folium"
+version = "0.23.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "branca" },
+    { name = "folium" },
+    { name = "jinja2" },
+    { name = "streamlit" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/56/45/7c8589f607fa92c57607815f29fd0e3dbc267fb4df1ae27c7b7e002a805b/streamlit_folium-0.23.2.tar.gz", hash = "sha256:12a1d3a4e054b8dae4e24b7a66ba24667d2232a335bf9327025a6777128cc0ba", size = 330365 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/39/b4992da1f548c76c3a6014c61d3ae76d9afc75b0f8e1a79f667c2b4e25b6/streamlit_folium-0.23.2-py3-none-any.whl", hash = "sha256:649755df88810bd565fb2f38d884ff2ffe65a0157fd665ad925638ea4442e8f3", size = 328064 },
 ]
 
 [[package]]
