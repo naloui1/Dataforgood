@@ -12,5 +12,5 @@ hello.py
 .venv
 
 # FOLDERS DATA
-src/production_elec
-src/consomation_gaz
+src/data/production_elec
+src/data/consomation_gaz
