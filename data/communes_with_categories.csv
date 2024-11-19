@@ -1198,8 +1198,9 @@ code_commune_INSEE,nom_commune_postal,code_postal,libelle_acheminement,ligne_5,l
 14229,DOZULE,14430,DOZULE,,49.2290318466,-0.0448932247721,229.0,,Dozulé,Dozulé,14,Calvados,28.0,Normandie,0,0,1
 14230,DRUBEC,14130,DRUBEC,,49.2496863496,0.104043882828,230.0,,Drubec,Drubec,14,Calvados,28.0,Normandie,0,1,0
 14231,BEAUFOUR DRUVAL,14340,BEAUFOUR DRUVAL,,49.21417643,0.0234847434149,231.0,,Beaufour-Druval,Beaufour-Druval,14,Calvados,28.0,Normandie,0,1,0
-14231,BEAUFOUR DRUVAL,14340,BEAUFOUR DRUVAL,BEAUFOUR,49.21417643,0.0234847434149,231.0,,Beaufour-Druval,Beaufour-Druval,14,Calvados,28.0,Normandie,0,1,0
-14231,BEAUFOUR DRUVAL,14340,BEAUFOUR DRUVAL,ST AUBIN LEBIZAY,49.21417643,0.0234847434149,231.0,,Beaufour-Druval,Beaufour-Druval,14,Calvados,28.0,Normandie,0,1,0
+14231,BEAUFOUR DRUVAL,14340,BEAUFOUR DRUVAL,BEAUFOUR,49.21417643,0.0234847434149,231.0,,Beaufour-Druval,Beaufour-Druval,14,Calvados,28.0,Normandie,0,1,0Modify @app.py to display a toogle to show a heatmap o
+
+eaufour-Druval,Beaufour-Druval,14,Calvados,28.0,Normandie,0,1,0
 14232,DUCY STE MARGUERITE,14250,DUCY STE MARGUERITE,,49.2258240786,-0.611130880075,232.0,,Ducy-Sainte-Marguerite,Ducy-Sainte-Marguerite,14,Calvados,28.0,Normandie,0,1,0
 14236,ELLON,14250,ELLON,,49.2276401197,-0.68136443609,236.0,,Ellon,Ellon,14,Calvados,28.0,Normandie,0,1,0
 14237,EMIEVILLE,14630,EMIEVILLE,,49.1536061686,-0.224040672945,237.0,,Émiéville,Émiéville,14,Calvados,28.0,Normandie,0,3,0

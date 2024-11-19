@@ -12,154 +12,29 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Theme handling
-if 'dark_theme' not in st.session_state:
-    st.session_state.dark_theme = False
+# Initialize chat history in session state
+if 'chat_history' not in st.session_state:
+    st.session_state.chat_history = []
 
-# Custom CSS for the theme toggle
-st.markdown("""
-    <style>
-        /* Hide the default checkbox */
-        .stCheckbox {
-            display: none;
-        }
-        
-        /* Custom theme toggle button */
-        .theme-toggle {
-            cursor: pointer;
-            padding: 10px 15px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            background: #f0f2f6;
-            margin-bottom: 20px;
-        }
-        
-        .theme-toggle.dark {
-            background: #262730;
-        }
-        
-        /* Position the theme toggle button */
-        [data-testid="stToolbar"] {
-            right: 2rem;
-        }
-        
-        /* Right align the button container */
-        div.theme-toggle-container {
-            position: fixed;
-            right: 2rem;
-            top: 0.5rem;
-            z-index: 1000;
-        }
-        
-        /* Style the button */
-        .stButton > button {
-            border-radius: 50%;
-            padding: 0.5rem;
-            aspect-ratio: 1;
-            line-height: 1;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Update the theme
-if st.session_state.dark_theme:
-    st.markdown("""
-        <style>
-            /* Main app background */
-            .stApp, .stSidebar, [data-testid="stHeader"] {
-                background-color: #0E1117;
-                color: #FAFAFA;
-            }
-            
-            /* Buttons */
-            .stButton button {
-                background-color: #262730;
-                color: #FAFAFA;
-                border: 1px solid #4B4B4B;
-            }
-            
-            /* Data elements */
-            .stDataFrame div[role="cell"] {
-                background-color: #262730 !important;
-                color: #FAFAFA !important;
-            }
-            
-            .stDataFrame div[role="columnheader"] {
-                background-color: #262730 !important;
-                color: #FAFAFA !important;
-            }
-            
-            /* Metrics */
-            div[data-testid="stMetricValue"] {
-                color: #FAFAFA;
-            }
-            
-            /* Select boxes and dropdowns */
-            div[data-baseweb="select"] {
-                background-color: #262730 !important;
-            }
-            
-            div[data-baseweb="select"] * {
-                background-color: #262730 !important;
-                color: #FAFAFA !important;
-            }
-            
-            /* Dropdown menu */
-            div[data-baseweb="popover"] * {
-                background-color: #262730 !important;
-                color: #FAFAFA !important;
-            }
-            
-            div[data-baseweb="popover"] div[role="listbox"] {
-                background-color: #262730 !important;
-            }
-            
-            div[data-baseweb="popover"] li:hover {
-                background-color: #404040 !important;
-            }
-            
-            /* Selected options in multiselect */
-            div[data-baseweb="tag"] {
-                background-color: #404040 !important;
-            }
-            
-            div[data-baseweb="tag"] * {
-                background-color: #404040 !important;
-                color: #FAFAFA !important;
-            }
-            
-            /* Top header bar */
-            section[data-testid="stSidebar"] > div {
-                background-color: #0E1117;
-            }
-            
-            /* Headers and text */
-            h1, h2, h3, h4, h5, h6, p {
-                color: #FAFAFA !important;
-            }
-            
-            /* Sidebar text */
-            .stSidebar .stMarkdown {
-                color: #FAFAFA;
-            }
-            
-            /* Text input */
-            .stTextInput > div > div {
-                background-color: #262730;
-                color: #FAFAFA;
-            }
-            
-            /* Scrollbars */
-            ::-webkit-scrollbar-track {
-                background-color: #0E1117;
-            }
-            
-            ::-webkit-scrollbar-thumb {
-                background-color: #4B4B4B;
-            }
-        </style>
-    """, unsafe_allow_html=True)
+def process_chat_input(user_input, df, map_obj):
+    """
+    Process the chat input and return a response
+    Args:
+        user_input: str - The user's message
+        df: pandas DataFrame - The data
+        map_obj: folium.Map - The current map object
+    Returns:
+        str - The response message
+    """
+    if not st.session_state.get('openai_api_key'):
+        return "Please enter your OpenAI API key in the configuration menu (⚙️) to use the chatbot."
+    
+    try:
+        # Here we'll later implement the actual OpenAI chat logic
+        # For now, return a placeholder response
+        return f"You asked about: {user_input}"
+    except Exception as e:
+        return f"Error processing your request: {str(e)}"
 
 # Load the data
 @st.cache_data
@@ -173,7 +48,6 @@ def create_map(
     selected_categories=None,
     selected_types=None,
     selected_commune=None,
-    dark_mode=False,
 ):
     # Set bounds for France
     sw = [41.333, -4.833]  # Southwest corner
@@ -188,14 +62,11 @@ def create_map(
         center_lat, center_lon = 46.603354, 1.888334  # Center of France
         zoom_start = 6
 
-    # Select map tiles based on theme
-    tiles = "CartoDB dark_matter" if dark_mode else "CartoDB positron"
-
     # Create the base map with zoom restrictions
     m = folium.Map(
         location=[center_lat, center_lon],
         zoom_start=zoom_start,
-        tiles=tiles,
+        tiles="CartoDB positron",
         min_zoom=6,  # Restrict zoom out to France level
         max_zoom=18,  # Maximum zoom in level
     )
@@ -220,10 +91,10 @@ def create_map(
     """
     m.get_root().script.add_child(folium.Element(script))
 
-    # Define colors for categories based on theme
+    # Define colors for categories
     category_colors = {
-        "patrimoine": "lightblue" if dark_mode else "blue",
-        "spectacle_vivant": "orange" if dark_mode else "red"
+        "patrimoine": "blue",
+        "spectacle_vivant": "red"
     }
 
     # Create a marker cluster
@@ -240,10 +111,9 @@ def create_map(
 
     # Add markers for each point
     for idx, row in filtered_data.iterrows():
-        # Create popup content with themed styling
-        popup_style = "color: white;" if dark_mode else "color: black;"
+        # Create popup content
         popup_content = f"""
-        <div style="{popup_style}">
+        <div>
         <b>{row['nom_infrastructure']}</b><br>
         Type: {row['type_infrastructure']}<br>
         Catégorie: {row['categorie']}<br>
@@ -261,7 +131,6 @@ def create_map(
 
     return m
 
-
 def main():
     # Create a layout with two columns
     left_col, right_col = st.columns([11, 1])
@@ -269,21 +138,19 @@ def main():
     with left_col:
         st.title("🎭 Carte des Infrastructures Culturelles en France")
 
-    with right_col:
-        if st.session_state.dark_theme:
-            if st.button("🌙"):
-                st.session_state.dark_theme = False
-                st.rerun()
-        else:
-            if st.button("☀️"):
-                st.session_state.dark_theme = True
-                st.rerun()
-
     # Load data
     df = load_data()
 
     # Sidebar filters
     st.sidebar.header("Filtres")
+
+    # Configuration section in sidebar
+    st.sidebar.markdown("---")  # Add a separator
+    with st.sidebar.expander("⚙️ Configuration"):
+        api_key = st.text_input("OpenAI API Key", type="password", key="openai_api_key")
+        if api_key:
+            import os
+            os.environ["OPENAI_API_KEY"] = api_key
 
     # Commune search with autocomplete
     communes = sorted(df["nom_commune"].unique())
@@ -334,10 +201,45 @@ def main():
         selected_categories,
         selected_types,
         selected_commune,
-        st.session_state.dark_theme
     )
     folium_static(map_obj, width=1200, height=600)
-
+    
+    # Add chat interface
+    st.markdown("---")
+    st.subheader("💬 Assistant Culturel")
+    st.markdown("""
+    Posez vos questions sur les infrastructures culturelles. Par exemple:
+    - Montrez-moi tous les théâtres à Paris
+    - Quelles sont les communes avec le plus de musées?
+    - Filtrer les sites par type de spectacle vivant
+    """)
+    
+    # Display chat history
+    for message in st.session_state.chat_history:
+        with st.chat_message(message["role"]):
+            st.write(message["content"])
+    
+    # Chat input
+    if prompt := st.chat_input("Posez votre question ici..."):
+        # Add user message to chat history
+        st.session_state.chat_history.append({"role": "user", "content": prompt})
+        
+        # Display user message
+        with st.chat_message("user"):
+            st.write(prompt)
+        
+        # Get and display assistant response
+        response = process_chat_input(prompt, df, map_obj)
+        
+        # Add assistant response to chat history
+        st.session_state.chat_history.append({"role": "assistant", "content": response})
+        
+        # Display assistant response
+        with st.chat_message("assistant"):
+            st.write(response)
+            
+        # Rerun to update the chat display
+        st.rerun()
 
 if __name__ == "__main__":
     main()
