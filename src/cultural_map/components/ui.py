@@ -12,10 +12,20 @@ def setup_page():
     st.markdown(
         """
         <style>
-        /* Reset base styles */
-        .stApp {
+        /* Remove ALL possible padding and margins */
+        * {
             margin: 0 !important;
             padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Remove header completely */
+        header {display: none !important;}
+        
+        /* Reset base styles */
+        .stApp {
+            position: absolute !important;
+            inset: 0 !important;
             overflow: hidden !important;
         }
 
@@ -26,8 +36,10 @@ def setup_page():
             top: 0 !important;
             height: 100vh !important;
             width: 860px !important;
+            transform: none !important;
             transition: transform 0.3s ease-in-out !important;
             background-color: rgb(240, 242, 246) !important;
+            z-index: 1000 !important;
         }
 
         [data-testid="stSidebar"] > div {
@@ -44,36 +56,36 @@ def setup_page():
 
         /* Main content area */
         .main .block-container {
+            position: fixed !important;
+            inset: 0 !important;
             margin: 0 !important;
-            padding: 0 !important;
             max-width: none !important;
-            width: calc(100% - 860px) !important;
-            margin-left: 860px !important;
-            transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out !important;
-            height: 100vh !important;
-            overflow: hidden !important;
+            width: 100vw !important;
+            transition: margin-left 0.3s ease-in-out !important;
         }
 
-        /* Main content when sidebar is collapsed */
-        [data-testid="stSidebar"][aria-expanded="false"] + .main .block-container {
-            margin-left: 0 !important;
-            width: 100% !important;
+        /* Main content when sidebar is expanded */
+        [data-testid="stSidebar"][aria-expanded="true"] + .main .block-container {
+            margin-left: 860px !important;
+            width: calc(100vw - 860px) !important;
         }
 
         /* Map container */
         div.element-container:has(iframe) {
+            position: absolute !important;
+            inset: 0 !important;
             height: 100vh !important;
-            margin: 0 !important;
-            padding: 0 !important;
+            width: 100% !important;
         }
 
         /* Map iframe */
         iframe {
+            position: absolute !important;
+            inset: 0 !important;
             width: 100% !important;
             height: 100% !important;
             border: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
+            display: block !important;
         }
 
         /* Sidebar components */
@@ -96,19 +108,39 @@ def setup_page():
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
 
-        /* Fix stApp container */
-        .stApp > header {
-            position: fixed !important;
-            top: 0 !important;
-            right: 0 !important;
-            left: 0 !important;
-            height: 0 !important;
-            background: transparent !important;
-            z-index: 999999 !important;
+        /* Remove ALL possible padding */
+        .main > div:first-child,
+        .main > div > div:first-child,
+        .element-container,
+        .stMarkdown,
+        .stMarkdown > div:first-child {
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
+        /* Force full viewport usage */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+
+        /* Override Streamlit's default padding */
+        .css-1d391kg, .css-1a1fmpi {
+            padding: 0 !important;
+        }
+
+        /* Ensure map container takes full size */
+        .element-container div[data-testid="column"] {
+            width: 100% !important;
+            padding: 0 !important;
+        }
+
+        /* Remove any potential gaps */
         .stApp > .main {
-            margin-top: 0 !important;
+            gap: 0 !important;
         }
         </style>
     """,
@@ -186,5 +218,5 @@ def create_sidebar(data, chat_placeholder):
 
 def show_map(map_object):
     """Display the map in the main area."""
-    # Display the map with dynamic height calculation
+    # Display the map with fixed dimensions
     folium_static(map_object, width=1920, height=1080)
