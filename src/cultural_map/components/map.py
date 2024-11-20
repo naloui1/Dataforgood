@@ -41,6 +41,7 @@ def create_map(
         dragging=True,
         scrollWheelZoom=True,
         control_scale=True,
+        zoomControl=False,  # Disable zoom control completely
     )
 
     # Add strict bounds control and sidebar offset handling using custom JavaScript
@@ -189,9 +190,6 @@ def create_map(
     else:
         # Set default bounds to France
         m.fit_bounds([sw, ne])
-
-    # Add fullscreen control
-    plugins.Fullscreen().add_to(m)
 
     # Create marker cluster
     marker_cluster = plugins.MarkerCluster().add_to(m)
