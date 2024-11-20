@@ -6,7 +6,10 @@ from streamlit_folium import folium_static
 import branca
 
 # Define colors for categories
-CATEGORY_COLORS = {"patrimoine": "blue", "spectacle_vivant": "red"}
+CATEGORY_COLORS = {
+    "patrimoine": "blue",  # Cultural heritage sites
+    "spectacle_vivant": "red",  # Live performances and cultural activities
+}
 
 
 def create_map(
@@ -25,24 +28,24 @@ def create_map(
         folium.Map: The created map object
     """
     # Set bounds for France
-    sw = [42.333, -4.833]  # Southwest corner
+    sw = [41.333, -4.833]  # Southwest corner (adjusted for Corsica)
     ne = [51.2, 8.833]  # Northeast corner
 
     # Determine initial view
     if selected_commune:
         commune_data = data[data["nom_commune"] == selected_commune].iloc[0]
         initial_location = [commune_data["latitude"], commune_data["longitude"]]
-        initial_zoom = 16  # Changed to zoom level 16 for ~300m scale view
+        initial_zoom = 13  # Adjusted for better commune view
     else:
         initial_location = [(sw[0] + ne[0]) / 2, (sw[1] + ne[1]) / 2]
-        initial_zoom = 7
+        initial_zoom = 6
 
-    # Create base map
+    # Create base map with optimized settings
     m = folium.Map(
         location=initial_location,
         zoom_start=initial_zoom,
         tiles="CartoDB positron",
-        min_zoom=6,
+        min_zoom=5,
         max_zoom=18,
         dragging=True,
         scrollWheelZoom=True,
@@ -88,22 +91,32 @@ def create_map(
         
         // Enforce minimum zoom
         map.on('zoomend', function() {{
-            if (map.getZoom() < 6) {{
-                map.setZoom(6);
+            if (map.getZoom() < 5) {{
+                map.setZoom(5);
             }}
         }});
 
         // If a commune is selected, ensure we're at the correct zoom level
         if ({selected_commune is not None}) {{
-            map.setZoom(16);  // Changed to zoom level 16 for ~300m scale view
+            map.setZoom(13);
         }}
     """
 
     # Add the bounds control script
     m.get_root().script.add_child(folium.Element(bounds_script))
 
-    # Create marker cluster
-    marker_cluster = plugins.MarkerCluster().add_to(m)
+    # Create optimized marker cluster
+    marker_cluster = plugins.MarkerCluster(
+        options={
+            "maxClusterRadius": 50,  # Smaller radius for more granular clusters
+            "disableClusteringAtZoom": 12,  # Stop clustering at zoom level 12
+            "spiderfyOnMaxZoom": True,  # Enable spiderfy for overlapping markers
+            "showCoverageOnHover": False,  # Disable coverage display for performance
+            "zoomToBoundsOnClick": True,  # Zoom to bounds when clicking cluster
+            "removeOutsideVisibleBounds": True,  # Remove markers outside view
+            "animate": False,  # Disable animations for better performance
+        }
+    ).add_to(m)
 
     # Filter data based on selections
     filtered_data = data.copy()
@@ -118,15 +131,15 @@ def create_map(
     if selected_commune:
         filtered_data = filtered_data[filtered_data["nom_commune"] == selected_commune]
 
-    # Add markers
+    # Add markers with optimized popup content
     for _, row in filtered_data.iterrows():
         popup_content = f"""
-        <div>
-        <b>{row['nom_infrastructure']}</b><br>
-        Type: {row['type_infrastructure']}<br>
-        Catégorie: {row['categorie']}<br>
-        Commune: {row['nom_commune']}<br>
-        Code Postal: {row['code_postal']}
+        <div style='font-family: Arial, sans-serif; min-width: 200px;'>
+            <h4 style='margin-bottom: 10px;'>{row['nom_infrastructure']}</h4>
+            <p><b>Type:</b> {row['type_infrastructure']}<br>
+            <b>Catégorie:</b> {row['categorie']}<br>
+            <b>Commune:</b> {row['nom_commune']}<br>
+            <b>Code Postal:</b> {row['code_postal']}</p>
         </div>
         """
 
