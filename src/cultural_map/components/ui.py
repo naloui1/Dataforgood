@@ -358,38 +358,91 @@ def create_sidebar(
 ):
     """Create the sidebar with filters and visualization."""
     with st.sidebar:
+        # Add custom CSS
+        st.markdown("""
+            <style>
+            .types-filter, .categories-filter, .commune-filter {
+                background: rgba(240, 242, 246, 0.4);
+                padding: 10px;
+                border-radius: 5px;
+                margin: 5px 0;
+                border: 1px solid rgba(49, 51, 63, 0.1);
+            }
+            
+            .element-container.st-emotion-cache-1ej224o {
+                border-bottom: 1px solid rgba(49, 51, 63, 0.2);
+                padding-bottom: 8px;
+                margin-bottom: 8px;
+                background: none;
+                box-shadow: none;
+            }
+
+            /* Increase text size in sidebar */
+            section[data-testid="stSidebar"] .st-emotion-cache-10trblm {
+                font-size: 32px !important;
+            }
+            
+            section[data-testid="stSidebar"] label {
+                font-size: 20px !important;
+            }
+            
+            section[data-testid="stSidebar"] .st-emotion-cache-81oif8 {
+                font-size: 18px !important;
+            }
+
+            section[data-testid="stSidebar"] .st-emotion-cache-16idsys p,
+            section[data-testid="stSidebar"] .st-emotion-cache-16idsys span {
+                font-size: 18px !important;
+            }
+
+            section[data-testid="stSidebar"] button {
+                font-size: 18px !important;
+            }
+
+            /* Main title styling */
+            .main-title {
+                text-align: center;
+                font-size: 24px !important;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid rgba(49, 51, 63, 0.2);
+            }
+            </style>
+        """, unsafe_allow_html=True)
+        
+        # Main title
+        st.markdown('<p class="main-title">Carte Culturelle de France 🎭</p>', unsafe_allow_html=True)
+        
         st.title("Filtres")
 
-        # Create two columns for filters
-        col1, col2 = st.columns(2)
+        # Create collapsible section for categories and types
+        with st.expander("Filtres avancés", expanded=False):
+            # Create two columns for filters
+            col1, col2 = st.columns(2)
 
-        selected_categories = None
-        selected_types = None
-        selected_commune = None
+            with col1:
+                # Categories filter
+                st.markdown('<div class="categories-filter">', unsafe_allow_html=True)
+                categories = sorted(data["categorie"].unique())
+                selected_categories = st.multiselect(
+                    "Catégories",
+                    options=categories,
+                    default=categories,
+                    help="Sélectionnez une ou plusieurs catégories",
+                )
+                st.markdown("</div>", unsafe_allow_html=True)
 
-        with col1:
-            # Categories filter with color coding
-            st.markdown('<div class="categories-filter">', unsafe_allow_html=True)
-            categories = sorted(data["categorie"].unique())
-            selected_categories = st.multiselect(
-                "Catégories",
-                options=categories,
-                default=categories,
-                help="Sélectionnez une ou plusieurs catégories",
-            )
-            st.markdown("</div>", unsafe_allow_html=True)
-
-        with col2:
-            # Types filter with color coding
-            st.markdown('<div class="types-filter">', unsafe_allow_html=True)
-            types = sorted(data["type_infrastructure"].unique())
-            selected_types = st.multiselect(
-                "Types d'infrastructure",
-                options=types,
-                default=types,
-                help="Sélectionnez un ou plusieurs types",
-            )
-            st.markdown("</div>", unsafe_allow_html=True)
+            with col2:
+                # Types filter with color coding
+                st.markdown('<div class="types-filter">', unsafe_allow_html=True)
+                types = sorted(data["type_infrastructure"].unique())
+                selected_types = st.multiselect(
+                    "Types d'infrastructure",
+                    options=types,
+                    default=types,
+                    help="Sélectionnez un ou plusieurs types",
+                )
+                st.markdown("</div>", unsafe_allow_html=True)
 
         # Commune filter (full width)
         st.markdown('<div class="commune-filter">', unsafe_allow_html=True)
