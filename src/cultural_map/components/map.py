@@ -6,6 +6,7 @@ from streamlit_folium import folium_static
 import branca
 import numpy as np
 import pandas as pd
+from ..data.loader import load_heatmap_data
 
 # Define type-specific colors and icons with larger radius
 TYPE_STYLES = {
@@ -152,7 +153,7 @@ def create_map(
 
     # Load heatmap data
     try:
-        heatmap_data = pd.read_pickle("data/heatmap_data.pkl")
+        heatmap_data = load_heatmap_data()
 
         # Create heatmap layer
         heatmap = plugins.HeatMap(

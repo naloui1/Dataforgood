@@ -4,37 +4,37 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 
-def creating_vusualisation(data: pd.DataFrame, nom_commune: str) -> go.Figure:
-    df = data[
-        data["Commune"] == nom_commune
-    ]  # Using 'Commune' as per the CSV structure
-
+def creating_visualisation(data: pd.DataFrame, nom_commune: str) -> go.Figure:
+    # Prepare data for visualization
+    df = data[data["nom_commune"] == nom_commune].copy()
+    
+    # Create a summary dataframe for visualization
+    viz_data = df.groupby(['categorie', 'type_infrastructure']).size().reset_index(name='count')
+    
     # Sunburst Chart
     fig_sunburst = px.sunburst(
-        data_frame=df,
-        path=["categorie", "Type équipement ou lieu"],
-        values=(df["count"] / df["count"].sum()) * 100,
-        color="Type équipement ou lieu",
+        data_frame=viz_data,
+        path=["categorie", "type_infrastructure"],
+        values="count",
+        color="type_infrastructure",
         color_discrete_sequence=px.colors.qualitative.Pastel,
-        hover_data={"count": False},
+        hover_data={"count": True},
     )
 
-    fig_sunburst.update_traces(texttemplate="%{label}<br>%{value:,.1f}%")
+    fig_sunburst.update_traces(texttemplate="%{label}<br>%{value:,.0f}")
 
     # Bar Chart
     fig_bar = px.bar(
-        df.sort_values(by=["count", "categorie"], ascending=[False, True]),
-        x="Type équipement ou lieu",
+        viz_data.sort_values(by=["count", "categorie"], ascending=[False, True]),
+        x="type_infrastructure",
         y="count",
         color="categorie",
-        labels={"count": "Event Count", "Type équipement ou lieu": "Equipment Type"},
+        labels={"count": "Nombre d'équipements", "type_infrastructure": "Type d'équipement"},
         color_discrete_sequence=px.colors.qualitative.Pastel,
     )
 
     fig_bar.update_traces(
-        text=df.sort_values(by=["count", "categorie"], ascending=[False, True])[
-            "count"
-        ],
+        text=viz_data.sort_values(by=["count", "categorie"], ascending=[False, True])["count"],
         textposition="outside",
         insidetextfont=dict(size=20),
     )
@@ -49,48 +49,18 @@ def creating_vusualisation(data: pd.DataFrame, nom_commune: str) -> go.Figure:
         specs=[[{"type": "sunburst"}], [{"type": "bar"}]],
     )
 
-    # Add sunburst and bar chart traces to the subplot
-    for trace in fig_sunburst["data"]:
+    # Add traces to the subplots
+    for trace in fig_sunburst.data:
         fig.add_trace(trace, row=1, col=1)
-
-    for trace in fig_bar["data"]:
+    for trace in fig_bar.data:
         fig.add_trace(trace, row=2, col=1)
 
-    # Add Commune title annotation
-    commune_title = f"<b>Commune:</b> {df['Commune'].iloc[0]}"  # Using 'Commune' as per the CSV structure
-    fig.add_annotation(
-        text=commune_title,
-        x=0.5,
-        y=1.15,
-        showarrow=False,
-        font=dict(size=22, color="black", family="Arial"),
-        align="center",
-        xref="paper",
-        yref="paper",
-    )
-
-    # Add Population annotation below the Commune title
-    population_number = int(df["PTOT"].iloc[0])
-    fig.add_annotation(
-        text=f"<b>Population:</b> {population_number:,}",
-        x=0.5,
-        y=1.09,
-        showarrow=False,
-        font=dict(size=22, color="black", family="Arial"),
-        align="center",
-        xref="paper",
-        yref="paper",
-    )
-
-    # Update layout for the entire figure
+    # Update layout
     fig.update_layout(
-        margin=dict(t=80, l=50, r=50, b=50),
-        title_font=dict(family="Arial, sans-serif", size=22, color="black"),
-        font=dict(family="Arial, sans-serif", size=14, color="black"),
-        height=600,
-        width=500,
-        showlegend=True,
-        legend=dict(orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5),
+        height=800,
+        showlegend=False,
+        title=f"Distribution des équipements culturels à {nom_commune}",
+        title_x=0.5,
     )
 
     return fig
