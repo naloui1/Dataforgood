@@ -1968,7 +1968,6 @@ Cannes	73990.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5526202843	7.00427592728	6
 Cannes	73990.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5526202843	7.00427592728	6029.0	Musée	3	vivant
 Cannes	73990.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5526202843	7.00427592728	6029.0	Scène	1	vivant
 Cannes	73990.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5526202843	7.00427592728	6029.0	Service d'archives	2	patrimoine
-Cannes	73990.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5526202843	7.00427592728	6029.0	Établissement d'enseignement supérieur	1	Strange
 Le Cannet	41969.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5729768613	7.00642057758	6030.0	Bibliothèque	2	vivant
 Le Cannet	41969.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5729768613	7.00642057758	6030.0	Cinéma	2	vivant
 Le Cannet	41969.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5729768613	7.00642057758	6030.0	Monument	4	patrimoine
@@ -2074,7 +2073,6 @@ Mougins	20109.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5961410556	7.00129444919	
 Mougins	20109.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5961410556	7.00129444919	6085.0	Monument	3	patrimoine
 Mougins	20109.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5961410556	7.00129444919	6085.0	Scène	1	vivant
 Mougins	20109.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5961410556	7.00129444919	6085.0	Service d'archives	1	patrimoine
-Mougins	20109.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5961410556	7.00129444919	6085.0	Établissement d'enseignement supérieur	1	Strange
 Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	6088.0	Bibliothèque	16	vivant
 Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	6088.0	Centre d'art	1	vivant
 Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	6088.0	Centre de création artistique	1	vivant
@@ -2089,7 +2087,6 @@ Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	60
 Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	6088.0	Parc et jardin	2	patrimoine
 Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	6088.0	Service d'archives	2	patrimoine
 Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	6088.0	Théâtre	3	vivant
-Nice	351011.0	93.0	06	Provence-Alpes-Côte d'Azur	43.7119992661	7.23826889465	6088.0	Établissement d'enseignement supérieur	1	Strange
 Pégomas	8148.0	93.0	06	Provence-Alpes-Côte d'Azur	43.5865553156	6.92224837943	6090.0	Bibliothèque	1	vivant
 Peille	2311.0	93.0	06	Provence-Alpes-Côte d'Azur	43.8064648293	7.41111016741	6091.0	Bibliothèque	1	vivant
 Peille	2311.0	93.0	06	Provence-Alpes-Côte d'Azur	43.8064648293	7.41111016741	6091.0	Monument	4	patrimoine
@@ -2739,7 +2736,6 @@ Foisches	260.0	44.0	08	Grand Est	50.129087843	4.77469221045	8175.0	Monument	1	pa
 Fossé	59.0	44.0	08	Grand Est	49.4497857688	5.00506242697	8176.0	Monument	1	patrimoine
 Fraillicourt	183.0	44.0	08	Grand Est	49.6642796699	4.1683433147	8178.0	Monument	1	patrimoine
 La Francheville	1697.0	44.0	08	Grand Est	49.7255789105	4.70732068022	8180.0	Bibliothèque	1	vivant
-La Francheville	1697.0	44.0	08	Grand Est	49.7255789105	4.70732068022	8180.0	Établissement d'enseignement supérieur	1	Strange
 Fromelennes	1061.0	44.0	08	Grand Est	50.114956311	4.86298935774	8183.0	Bibliothèque	1	vivant
 Fumay	3198.0	44.0	08	Grand Est	49.9726262845	4.66006812542	8185.0	Monument	1	patrimoine
 Gespunsart	997.0	44.0	08	Grand Est	49.8176588618	4.84437565328	8188.0	Bibliothèque	1	vivant
@@ -4459,7 +4455,6 @@ Arles	51121.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5468692378	4.66215642574	13
 Arles	51121.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5468692378	4.66215642574	13004.0	Musée	4	vivant
 Arles	51121.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5468692378	4.66215642574	13004.0	Scène	1	vivant
 Arles	51121.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5468692378	4.66215642574	13004.0	Service d'archives	1	patrimoine
-Arles	51121.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5468692378	4.66215642574	13004.0	Établissement d'enseignement supérieur	1	Strange
 Aubagne	47747.0	93.0	13	Provence-Alpes-Côte d'Azur	43.2934843764	5.56331273477	13005.0	Bibliothèque	1	vivant
 Aubagne	47747.0	93.0	13	Provence-Alpes-Côte d'Azur	43.2934843764	5.56331273477	13005.0	Cinéma	2	vivant
 Aubagne	47747.0	93.0	13	Provence-Alpes-Côte d'Azur	43.2934843764	5.56331273477	13005.0	Conservatoire	1	vivant
@@ -4479,7 +4474,6 @@ Les Baux-de-Provence	293.0	93.0	13	Provence-Alpes-Côte d'Azur	43.745808725	4.80
 Les Baux-de-Provence	293.0	93.0	13	Provence-Alpes-Côte d'Azur	43.745808725	4.80218162499	13011.0	Lieu archéologique	1	patrimoine
 Les Baux-de-Provence	293.0	93.0	13	Provence-Alpes-Côte d'Azur	43.745808725	4.80218162499	13011.0	Monument	22	patrimoine
 Les Baux-de-Provence	293.0	93.0	13	Provence-Alpes-Côte d'Azur	43.745808725	4.80218162499	13011.0	Musée	2	vivant
-Beaurecueil	664.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5220542383	5.545935902	13012.0	Établissement d'enseignement supérieur	2	Strange
 Belcodène	1984.0	93.0	13	Provence-Alpes-Côte d'Azur	43.4220302139	5.58376148513	13013.0	Bibliothèque	1	vivant
 Berre-l'Étang	13983.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5036442498	5.1606136975	13014.0	Bibliothèque	1	vivant
 Berre-l'Étang	13983.0	93.0	13	Provence-Alpes-Côte d'Azur	43.5036442498	5.1606136975	13014.0	Cinéma	1	vivant
@@ -4617,7 +4611,6 @@ Marignane	33222.0	93.0	13	Provence-Alpes-Côte d'Azur	43.4172068362	5.2122190454
 							13055.0	Scène	5	vivant
 							13055.0	Service d'archives	4	patrimoine
 							13055.0	Théâtre	14	vivant
-							13055.0	Établissement d'enseignement supérieur	3	Strange
 Martigues	49131.0	93.0	13	Provence-Alpes-Côte d'Azur	43.3798920489	5.04945402314	13056.0	Bibliothèque	6	vivant
 Martigues	49131.0	93.0	13	Provence-Alpes-Côte d'Azur	43.3798920489	5.04945402314	13056.0	Cinéma	3	vivant
 Martigues	49131.0	93.0	13	Provence-Alpes-Côte d'Azur	43.3798920489	5.04945402314	13056.0	Conservatoire	1	vivant
@@ -4901,7 +4894,6 @@ Caen	110357.0	28.0	14	Normandie	49.1847936737	-0.369801713036	14118.0	Parc et ja
 Caen	110357.0	28.0	14	Normandie	49.1847936737	-0.369801713036	14118.0	Scène	3	vivant
 Caen	110357.0	28.0	14	Normandie	49.1847936737	-0.369801713036	14118.0	Service d'archives	3	patrimoine
 Caen	110357.0	28.0	14	Normandie	49.1847936737	-0.369801713036	14118.0	Théâtre	1	vivant
-Caen	110357.0	28.0	14	Normandie	49.1847936737	-0.369801713036	14118.0	Établissement d'enseignement supérieur	1	Strange
 Cagny	2054.0	28.0	14	Normandie	49.154208668	-0.260672944073	14119.0	Bibliothèque	1	vivant
 Cagny	2054.0	28.0	14	Normandie	49.154208668	-0.260672944073	14119.0	Monument	2	patrimoine
 Cahagnes	1431.0	28.0	14	Normandie	49.0671203242	-0.762793901462	14120.0	Monument	2	patrimoine
@@ -5714,7 +5706,6 @@ Angoulême	42715.0	75.0	16	Nouvelle-Aquitaine	45.6472585146	0.14514490683	16015.
 Angoulême	42715.0	75.0	16	Nouvelle-Aquitaine	45.6472585146	0.14514490683	16015.0	Musée	4	vivant
 Angoulême	42715.0	75.0	16	Nouvelle-Aquitaine	45.6472585146	0.14514490683	16015.0	Scène	2	vivant
 Angoulême	42715.0	75.0	16	Nouvelle-Aquitaine	45.6472585146	0.14514490683	16015.0	Service d'archives	3	patrimoine
-Angoulême	42715.0	75.0	16	Nouvelle-Aquitaine	45.6472585146	0.14514490683	16015.0	Établissement d'enseignement supérieur	1	Strange
 Ansac-sur-Vienne	841.0	75.0	16	Nouvelle-Aquitaine	45.9943029714	0.619730334325	16016.0	Monument	3	patrimoine
 Ars	719.0	75.0	16	Nouvelle-Aquitaine	45.6370134609	-0.402334253854	16018.0	Bibliothèque	1	vivant
 Ars	719.0	75.0	16	Nouvelle-Aquitaine	45.6370134609	-0.402334253854	16018.0	Monument	2	patrimoine
@@ -6689,7 +6680,6 @@ Bourges	65723.0	24.0	18	Centre-Val de Loire	47.0749572013	2.40417137557	18033.0	
 Bourges	65723.0	24.0	18	Centre-Val de Loire	47.0749572013	2.40417137557	18033.0	Parc et jardin	1	patrimoine
 Bourges	65723.0	24.0	18	Centre-Val de Loire	47.0749572013	2.40417137557	18033.0	Scène	3	vivant
 Bourges	65723.0	24.0	18	Centre-Val de Loire	47.0749572013	2.40417137557	18033.0	Service d'archives	2	patrimoine
-Bourges	65723.0	24.0	18	Centre-Val de Loire	47.0749572013	2.40417137557	18033.0	Établissement d'enseignement supérieur	1	Strange
 Brécy	1033.0	24.0	18	Centre-Val de Loire	47.1299888038	2.63016565896	18035.0	Bibliothèque	1	vivant
 Brécy	1033.0	24.0	18	Centre-Val de Loire	47.1299888038	2.63016565896	18035.0	Monument	1	patrimoine
 Brinay	530.0	24.0	18	Centre-Val de Loire	47.1640449226	2.11235689619	18036.0	Monument	1	patrimoine
@@ -7536,7 +7526,6 @@ Dijon	162650.0	27.0	21	Bourgogne-Franche-Comté	47.3229437965	5.03788805877	2123
 Dijon	162650.0	27.0	21	Bourgogne-Franche-Comté	47.3229437965	5.03788805877	21231.0	Opéra	1	vivant
 Dijon	162650.0	27.0	21	Bourgogne-Franche-Comté	47.3229437965	5.03788805877	21231.0	Scène	3	vivant
 Dijon	162650.0	27.0	21	Bourgogne-Franche-Comté	47.3229437965	5.03788805877	21231.0	Service d'archives	6	patrimoine
-Dijon	162650.0	27.0	21	Bourgogne-Franche-Comté	47.3229437965	5.03788805877	21231.0	Établissement d'enseignement supérieur	2	Strange
 Dompierre-en-Morvan	204.0	27.0	21	Bourgogne-Franche-Comté	47.4004660876	4.23216160368	21232.0	Monument	1	patrimoine
 Duesme	51.0	27.0	21	Bourgogne-Franche-Comté	47.6369569478	4.69319876077	21235.0	Monument	1	patrimoine
 Ébaty	262.0	27.0	21	Bourgogne-Franche-Comté	46.9293787687	4.78013604846	21236.0	Monument	1	patrimoine
@@ -9525,7 +9514,6 @@ Besançon	122463.0	27.0	25	Bourgogne-Franche-Comté	47.2553872249	6.01948696494	
 Besançon	122463.0	27.0	25	Bourgogne-Franche-Comté	47.2553872249	6.01948696494	25056.0	Musée	5	vivant
 Besançon	122463.0	27.0	25	Bourgogne-Franche-Comté	47.2553872249	6.01948696494	25056.0	Scène	4	vivant
 Besançon	122463.0	27.0	25	Bourgogne-Franche-Comté	47.2553872249	6.01948696494	25056.0	Service d'archives	3	patrimoine
-Besançon	122463.0	27.0	25	Bourgogne-Franche-Comté	47.2553872249	6.01948696494	25056.0	Établissement d'enseignement supérieur	1	Strange
 Bethoncourt	5384.0	27.0	25	Bourgogne-Franche-Comté	47.5411126642	6.8003750959	25057.0	Bibliothèque	1	vivant
 Bethoncourt	5384.0	27.0	25	Bourgogne-Franche-Comté	47.5411126642	6.8003750959	25057.0	Scène	6	vivant
 Beure	1392.0	27.0	25	Bourgogne-Franche-Comté	47.2060766708	6.00526129105	25058.0	Bibliothèque	1	vivant
@@ -10241,7 +10229,6 @@ Valence	65728.0	84.0	26	Auvergne-Rhône-Alpes	44.9229811667	4.91444013136	26362.
 Valence	65728.0	84.0	26	Auvergne-Rhône-Alpes	44.9229811667	4.91444013136	26362.0	Parc et jardin	1	patrimoine
 Valence	65728.0	84.0	26	Auvergne-Rhône-Alpes	44.9229811667	4.91444013136	26362.0	Scène	1	vivant
 Valence	65728.0	84.0	26	Auvergne-Rhône-Alpes	44.9229811667	4.91444013136	26362.0	Service d'archives	3	patrimoine
-Valence	65728.0	84.0	26	Auvergne-Rhône-Alpes	44.9229811667	4.91444013136	26362.0	Établissement d'enseignement supérieur	1	Strange
 Vassieux-en-Vercors	341.0	84.0	26	Auvergne-Rhône-Alpes	44.8802743526	5.3741063802	26364.0	Lieu archéologique	3	patrimoine
 Vassieux-en-Vercors	341.0	84.0	26	Auvergne-Rhône-Alpes	44.8802743526	5.3741063802	26364.0	Monument	2	patrimoine
 Vassieux-en-Vercors	341.0	84.0	26	Auvergne-Rhône-Alpes	44.8802743526	5.3741063802	26364.0	Musée	1	vivant
@@ -11025,7 +11012,6 @@ Brest	142234.0	53.0	29	Bretagne	48.4004997828	-4.5027907853	29019.0	Parc et jard
 Brest	142234.0	53.0	29	Bretagne	48.4004997828	-4.5027907853	29019.0	Scène	2	vivant
 Brest	142234.0	53.0	29	Bretagne	48.4004997828	-4.5027907853	29019.0	Service d'archives	2	patrimoine
 Brest	142234.0	53.0	29	Bretagne	48.4004997828	-4.5027907853	29019.0	Théâtre	1	vivant
-Brest	142234.0	53.0	29	Bretagne	48.4004997828	-4.5027907853	29019.0	Établissement d'enseignement supérieur	1	Strange
 Briec	5921.0	53.0	29	Bretagne	48.0935971343	-4.02078477146	29020.0	Bibliothèque	1	vivant
 Briec	5921.0	53.0	29	Bretagne	48.0935971343	-4.02078477146	29020.0	Monument	4	patrimoine
 Briec	5921.0	53.0	29	Bretagne	48.0935971343	-4.02078477146	29020.0	Théâtre	1	vivant
@@ -11445,7 +11431,6 @@ Quimper	65875.0	53.0	29	Bretagne	47.9971425162	-4.09111944455	29232.0	Musée	2	v
 Quimper	65875.0	53.0	29	Bretagne	47.9971425162	-4.09111944455	29232.0	Parc et jardin	1	patrimoine
 Quimper	65875.0	53.0	29	Bretagne	47.9971425162	-4.09111944455	29232.0	Scène	2	vivant
 Quimper	65875.0	53.0	29	Bretagne	47.9971425162	-4.09111944455	29232.0	Service d'archives	3	patrimoine
-Quimper	65875.0	53.0	29	Bretagne	47.9971425162	-4.09111944455	29232.0	Établissement d'enseignement supérieur	1	Strange
 Quimperlé	12782.0	53.0	29	Bretagne	47.8561303355	-3.55642894655	29233.0	Bibliothèque	2	vivant
 Quimperlé	12782.0	53.0	29	Bretagne	47.8561303355	-3.55642894655	29233.0	Cinéma	1	vivant
 Quimperlé	12782.0	53.0	29	Bretagne	47.8561303355	-3.55642894655	29233.0	Espace protégé	1	patrimoine
@@ -11837,7 +11822,6 @@ Nîmes	150335.0	76.0	30	Occitanie	43.844938394	4.34806796996	30189.0	Parc et jar
 Nîmes	150335.0	76.0	30	Occitanie	43.844938394	4.34806796996	30189.0	Scène	4	vivant
 Nîmes	150335.0	76.0	30	Occitanie	43.844938394	4.34806796996	30189.0	Service d'archives	2	patrimoine
 Nîmes	150335.0	76.0	30	Occitanie	43.844938394	4.34806796996	30189.0	Théâtre	1	vivant
-Nîmes	150335.0	76.0	30	Occitanie	43.844938394	4.34806796996	30189.0	Établissement d'enseignement supérieur	1	Strange
 Orsan	1224.0	76.0	30	Occitanie	44.1348287261	4.66522827508	30191.0	Bibliothèque	1	vivant
 Parignargues	696.0	76.0	30	Occitanie	43.8696516481	4.21350667303	30193.0	Bibliothèque	1	vivant
 Peyremale	278.0	76.0	30	Occitanie	44.2970112153	4.05911180139	30194.0	Monument	1	patrimoine
@@ -12526,7 +12510,6 @@ Toulouse	509200.0	76.0	31	Occitanie	43.5963814303	1.43167293364	31555.0	Parc et 
 Toulouse	509200.0	76.0	31	Occitanie	43.5963814303	1.43167293364	31555.0	Scène	2	vivant
 Toulouse	509200.0	76.0	31	Occitanie	43.5963814303	1.43167293364	31555.0	Service d'archives	3	patrimoine
 Toulouse	509200.0	76.0	31	Occitanie	43.5963814303	1.43167293364	31555.0	Théâtre	17	vivant
-Toulouse	509200.0	76.0	31	Occitanie	43.5963814303	1.43167293364	31555.0	Établissement d'enseignement supérieur	4	Strange
 Tournefeuille	30029.0	76.0	31	Occitanie	43.5781918597	1.33500697752	31557.0	Bibliothèque	1	vivant
 Tournefeuille	30029.0	76.0	31	Occitanie	43.5781918597	1.33500697752	31557.0	Centre de création artistique	1	vivant
 Tournefeuille	30029.0	76.0	31	Occitanie	43.5781918597	1.33500697752	31557.0	Cinéma	1	vivant
@@ -13007,7 +12990,6 @@ Bordeaux	265255.0	75.0	33	Nouvelle-Aquitaine	44.8572445351	-0.57369678116	33063.
 Bordeaux	265255.0	75.0	33	Nouvelle-Aquitaine	44.8572445351	-0.57369678116	33063.0	Scène	2	vivant
 Bordeaux	265255.0	75.0	33	Nouvelle-Aquitaine	44.8572445351	-0.57369678116	33063.0	Service d'archives	4	patrimoine
 Bordeaux	265255.0	75.0	33	Nouvelle-Aquitaine	44.8572445351	-0.57369678116	33063.0	Théâtre	4	vivant
-Bordeaux	265255.0	75.0	33	Nouvelle-Aquitaine	44.8572445351	-0.57369678116	33063.0	Établissement d'enseignement supérieur	3	Strange
 Bossugan	43.0	75.0	33	Nouvelle-Aquitaine	44.7915487429	-0.0519671900335	33064.0	Monument	1	patrimoine
 Bouliac	3848.0	75.0	33	Nouvelle-Aquitaine	44.8160953539	-0.50487313207	33065.0	Bibliothèque	1	vivant
 Bouliac	3848.0	75.0	33	Nouvelle-Aquitaine	44.8160953539	-0.50487313207	33065.0	Monument	1	patrimoine
@@ -13591,7 +13573,6 @@ Talence	46278.0	75.0	33	Nouvelle-Aquitaine	44.8060817507	-0.591124592873	33522.0
 Talence	46278.0	75.0	33	Nouvelle-Aquitaine	44.8060817507	-0.591124592873	33522.0	Scène	1	vivant
 Talence	46278.0	75.0	33	Nouvelle-Aquitaine	44.8060817507	-0.591124592873	33522.0	Service d'archives	1	patrimoine
 Talence	46278.0	75.0	33	Nouvelle-Aquitaine	44.8060817507	-0.591124592873	33522.0	Théâtre	1	vivant
-Talence	46278.0	75.0	33	Nouvelle-Aquitaine	44.8060817507	-0.591124592873	33522.0	Établissement d'enseignement supérieur	1	Strange
 Targon	2069.0	75.0	33	Nouvelle-Aquitaine	44.7345410468	-0.267821650496	33523.0	Bibliothèque	1	vivant
 Targon	2069.0	75.0	33	Nouvelle-Aquitaine	44.7345410468	-0.267821650496	33523.0	Monument	2	patrimoine
 Tauriac	1348.0	75.0	33	Nouvelle-Aquitaine	45.0535176036	-0.505943273443	33525.0	Monument	1	patrimoine
@@ -13962,7 +13943,6 @@ Montpellier	305743.0	76.0	34	Occitanie	43.6134409138	3.86851657896	34172.0	Parc 
 Montpellier	305743.0	76.0	34	Occitanie	43.6134409138	3.86851657896	34172.0	Scène	2	vivant
 Montpellier	305743.0	76.0	34	Occitanie	43.6134409138	3.86851657896	34172.0	Service d'archives	4	patrimoine
 Montpellier	305743.0	76.0	34	Occitanie	43.6134409138	3.86851657896	34172.0	Théâtre	7	vivant
-Montpellier	305743.0	76.0	34	Occitanie	43.6134409138	3.86851657896	34172.0	Établissement d'enseignement supérieur	3	Strange
 Montpeyroux	1412.0	76.0	34	Occitanie	43.711158125	3.50240555203	34173.0	Bibliothèque	1	vivant
 Montpeyroux	1412.0	76.0	34	Occitanie	43.711158125	3.50240555203	34173.0	Monument	1	patrimoine
 Mudaison	2926.0	76.0	34	Occitanie	43.6402176481	4.03634822151	34176.0	Bibliothèque	1	vivant
@@ -14592,7 +14572,6 @@ Rennes	229178.0	53.0	35	Bretagne	48.1119791219	-1.68186449144	35238.0	Musée	3	v
 Rennes	229178.0	53.0	35	Bretagne	48.1119791219	-1.68186449144	35238.0	Scène	2	vivant
 Rennes	229178.0	53.0	35	Bretagne	48.1119791219	-1.68186449144	35238.0	Service d'archives	3	patrimoine
 Rennes	229178.0	53.0	35	Bretagne	48.1119791219	-1.68186449144	35238.0	Théâtre	4	vivant
-Rennes	229178.0	53.0	35	Bretagne	48.1119791219	-1.68186449144	35238.0	Établissement d'enseignement supérieur	4	Strange
 Retiers	4632.0	53.0	35	Bretagne	47.9060282888	-1.34373706233	35239.0	Bibliothèque	1	vivant
 Retiers	4632.0	53.0	35	Bretagne	47.9060282888	-1.34373706233	35239.0	Cinéma	1	vivant
 Retiers	4632.0	53.0	35	Bretagne	47.9060282888	-1.34373706233	35239.0	Monument	1	patrimoine
@@ -15442,7 +15421,6 @@ Tours	140116.0	24.0	37	Centre-Val de Loire	47.3986382281	0.696526376417	37261.0	
 Tours	140116.0	24.0	37	Centre-Val de Loire	47.3986382281	0.696526376417	37261.0	Parc et jardin	1	patrimoine
 Tours	140116.0	24.0	37	Centre-Val de Loire	47.3986382281	0.696526376417	37261.0	Scène	1	vivant
 Tours	140116.0	24.0	37	Centre-Val de Loire	47.3986382281	0.696526376417	37261.0	Service d'archives	3	patrimoine
-Tours	140116.0	24.0	37	Centre-Val de Loire	47.3986382281	0.696526376417	37261.0	Établissement d'enseignement supérieur	2	Strange
 Truyes	2467.0	24.0	37	Centre-Val de Loire	47.2855863976	0.851603945631	37263.0	Bibliothèque	1	vivant
 Truyes	2467.0	24.0	37	Centre-Val de Loire	47.2855863976	0.851603945631	37263.0	Monument	2	patrimoine
 Varennes	263.0	24.0	37	Centre-Val de Loire	47.0709398168	0.912799456944	37265.0	Monument	1	patrimoine
@@ -15682,7 +15660,6 @@ Grenoble	159738.0	84.0	38	Auvergne-Rhône-Alpes	45.1821215167	5.72133051752	3818
 Grenoble	159738.0	84.0	38	Auvergne-Rhône-Alpes	45.1821215167	5.72133051752	38185.0	Scène	2	vivant
 Grenoble	159738.0	84.0	38	Auvergne-Rhône-Alpes	45.1821215167	5.72133051752	38185.0	Service d'archives	2	patrimoine
 Grenoble	159738.0	84.0	38	Auvergne-Rhône-Alpes	45.1821215167	5.72133051752	38185.0	Théâtre	3	vivant
-Grenoble	159738.0	84.0	38	Auvergne-Rhône-Alpes	45.1821215167	5.72133051752	38185.0	Établissement d'enseignement supérieur	2	Strange
 Gresse-en-Vercors	374.0	84.0	38	Auvergne-Rhône-Alpes	44.8864255639	5.525804416	38186.0	Bibliothèque	1	vivant
 Gresse-en-Vercors	374.0	84.0	38	Auvergne-Rhône-Alpes	44.8864255639	5.525804416	38186.0	Cinéma	1	vivant
 Le Gua	1858.0	84.0	38	Auvergne-Rhône-Alpes	45.0133395562	5.6155445833	38187.0	Bibliothèque	1	vivant
@@ -17342,7 +17319,6 @@ Saint-Étienne	174499.0	84.0	42	Auvergne-Rhône-Alpes	45.4301235512	4.3791399707
 Saint-Étienne	174499.0	84.0	42	Auvergne-Rhône-Alpes	45.4301235512	4.37913997076	42218.0	Scène	2	vivant
 Saint-Étienne	174499.0	84.0	42	Auvergne-Rhône-Alpes	45.4301235512	4.37913997076	42218.0	Service d'archives	4	patrimoine
 Saint-Étienne	174499.0	84.0	42	Auvergne-Rhône-Alpes	45.4301235512	4.37913997076	42218.0	Théâtre	2	vivant
-Saint-Étienne	174499.0	84.0	42	Auvergne-Rhône-Alpes	45.4301235512	4.37913997076	42218.0	Établissement d'enseignement supérieur	3	Strange
 Saint-Étienne-le-Molard	1055.0	84.0	42	Auvergne-Rhône-Alpes	45.739928029	4.09717656731	42219.0	Bibliothèque	1	vivant
 Saint-Étienne-le-Molard	1055.0	84.0	42	Auvergne-Rhône-Alpes	45.739928029	4.09717656731	42219.0	Lieu de mémoire	1	patrimoine
 Saint-Étienne-le-Molard	1055.0	84.0	42	Auvergne-Rhône-Alpes	45.739928029	4.09717656731	42219.0	Monument	2	patrimoine
@@ -18133,7 +18109,6 @@ Nantes	328144.0	52.0	44	Pays de la Loire	47.2316356767	-1.54831008605	44109.0	Mu
 Nantes	328144.0	52.0	44	Pays de la Loire	47.2316356767	-1.54831008605	44109.0	Parc et jardin	1	patrimoine
 Nantes	328144.0	52.0	44	Pays de la Loire	47.2316356767	-1.54831008605	44109.0	Scène	5	vivant
 Nantes	328144.0	52.0	44	Pays de la Loire	47.2316356767	-1.54831008605	44109.0	Service d'archives	4	patrimoine
-Nantes	328144.0	52.0	44	Pays de la Loire	47.2316356767	-1.54831008605	44109.0	Établissement d'enseignement supérieur	3	Strange
 Nort-sur-Erdre	9521.0	52.0	44	Pays de la Loire	47.447122285	-1.51824792558	44110.0	Bibliothèque	1	vivant
 Nort-sur-Erdre	9521.0	52.0	44	Pays de la Loire	47.447122285	-1.51824792558	44110.0	Cinéma	1	vivant
 Notre-Dame-des-Landes	2349.0	52.0	44	Pays de la Loire	47.3753590043	-1.71598291146	44111.0	Bibliothèque	1	vivant
@@ -18631,7 +18606,6 @@ Orléans	119065.0	24.0	45	Centre-Val de Loire	47.8828634214	1.91610357477	45234.
 Orléans	119065.0	24.0	45	Centre-Val de Loire	47.8828634214	1.91610357477	45234.0	Scène	3	vivant
 Orléans	119065.0	24.0	45	Centre-Val de Loire	47.8828634214	1.91610357477	45234.0	Service d'archives	4	patrimoine
 Orléans	119065.0	24.0	45	Centre-Val de Loire	47.8828634214	1.91610357477	45234.0	Théâtre	3	vivant
-Orléans	119065.0	24.0	45	Centre-Val de Loire	47.8828634214	1.91610357477	45234.0	Établissement d'enseignement supérieur	1	Strange
 Ormes	4419.0	24.0	45	Centre-Val de Loire	47.9478927355	1.8071403661	45235.0	Bibliothèque	1	vivant
 Ousson-sur-Loire	699.0	24.0	45	Centre-Val de Loire	47.6001760382	2.79533560153	45238.0	Bibliothèque	1	vivant
 Outarville	1355.0	24.0	45	Centre-Val de Loire	48.2142854596	2.02173092617	45240.0	Bibliothèque	1	vivant
@@ -19147,7 +19121,6 @@ Agen	33299.0	75.0	47	Nouvelle-Aquitaine	44.2028139104	0.625583928763	47001.0	Mus
 Agen	33299.0	75.0	47	Nouvelle-Aquitaine	44.2028139104	0.625583928763	47001.0	Scène	2	vivant
 Agen	33299.0	75.0	47	Nouvelle-Aquitaine	44.2028139104	0.625583928763	47001.0	Service d'archives	3	patrimoine
 Agen	33299.0	75.0	47	Nouvelle-Aquitaine	44.2028139104	0.625583928763	47001.0	Théâtre	1	vivant
-Agen	33299.0	75.0	47	Nouvelle-Aquitaine	44.2028139104	0.625583928763	47001.0	Établissement d'enseignement supérieur	1	Strange
 Agnac	469.0	75.0	47	Nouvelle-Aquitaine	44.640821375	0.382742954809	47003.0	Monument	2	patrimoine
 Aiguillon	4234.0	75.0	47	Nouvelle-Aquitaine	44.3012876866	0.358229103443	47004.0	Bibliothèque	1	vivant
 Aiguillon	4234.0	75.0	47	Nouvelle-Aquitaine	44.3012876866	0.358229103443	47004.0	Cinéma	1	vivant
@@ -19794,7 +19767,6 @@ Durtal	3425.0	52.0	49	Pays de la Loire	47.6780515421	-0.254608332885	49127.0	Bib
 Durtal	3425.0	52.0	49	Pays de la Loire	47.6780515421	-0.254608332885	49127.0	Monument	5	patrimoine
 Écouflant	4534.0	52.0	49	Pays de la Loire	47.5286938274	-0.518454771034	49129.0	Bibliothèque	1	vivant
 Écouflant	4534.0	52.0	49	Pays de la Loire	47.5286938274	-0.518454771034	49129.0	Monument	2	patrimoine
-Écouflant	4534.0	52.0	49	Pays de la Loire	47.5286938274	-0.518454771034	49129.0	Établissement d'enseignement supérieur	2	Strange
 Écuillé	686.0	52.0	49	Pays de la Loire	47.6151527391	-0.560819094743	49130.0	Bibliothèque	1	vivant
 Écuillé	686.0	52.0	49	Pays de la Loire	47.6151527391	-0.560819094743	49130.0	Monument	1	patrimoine
 Épieds	721.0	52.0	49	Pays de la Loire	47.1348367577	-0.0385758480154	49131.0	Monument	1	patrimoine
@@ -20107,7 +20079,6 @@ Cherbourg-en-Cotentin	80020.0	28.0	50	Normandie	49.633412156	-1.63390160204	5012
 Cherbourg-en-Cotentin	80020.0	28.0	50	Normandie	49.633412156	-1.63390160204	50129.0	Parc et jardin	2	patrimoine
 Cherbourg-en-Cotentin	80020.0	28.0	50	Normandie	49.633412156	-1.63390160204	50129.0	Scène	1	vivant
 Cherbourg-en-Cotentin	80020.0	28.0	50	Normandie	49.633412156	-1.63390160204	50129.0	Service d'archives	1	patrimoine
-Cherbourg-en-Cotentin	80020.0	28.0	50	Normandie	49.633412156	-1.63390160204	50129.0	Établissement d'enseignement supérieur	1	Strange
 Clitourps	232.0	28.0	50	Normandie	49.6512259574	-1.37120809063	50135.0	Monument	1	patrimoine
 Colomby	572.0	28.0	50	Normandie	49.4541493168	-1.48894916304	50138.0	Monument	2	patrimoine
 Condé-sur-Vire	4246.0	28.0	50	Normandie	49.0540546845	-1.02453868309	50139.0	Bibliothèque	1	vivant
@@ -20469,7 +20440,6 @@ Châlons-en-Champagne	44928.0	44.0	51	Grand Est	48.9640892125	4.37883539725	5110
 Châlons-en-Champagne	44928.0	44.0	51	Grand Est	48.9640892125	4.37883539725	51108.0	Parc et jardin	1	patrimoine
 Châlons-en-Champagne	44928.0	44.0	51	Grand Est	48.9640892125	4.37883539725	51108.0	Scène	2	vivant
 Châlons-en-Champagne	44928.0	44.0	51	Grand Est	48.9640892125	4.37883539725	51108.0	Service d'archives	3	patrimoine
-Châlons-en-Champagne	44928.0	44.0	51	Grand Est	48.9640892125	4.37883539725	51108.0	Établissement d'enseignement supérieur	1	Strange
 Chambrecy	149.0	44.0	51	Grand Est	49.1821738115	3.82605710701	51111.0	Monument	1	patrimoine
 Chamery	451.0	44.0	51	Grand Est	49.1704993272	3.95695378996	51112.0	Monument	1	patrimoine
 Champfleury	589.0	44.0	51	Grand Est	49.195865059	4.01839707256	51115.0	Bibliothèque	1	vivant
@@ -20669,7 +20639,6 @@ Reims	182220.0	44.0	51	Grand Est	49.2514906066	4.0402302322	51454.0	Parc et jard
 Reims	182220.0	44.0	51	Grand Est	49.2514906066	4.0402302322	51454.0	Scène	2	vivant
 Reims	182220.0	44.0	51	Grand Est	49.2514906066	4.0402302322	51454.0	Service d'archives	2	patrimoine
 Reims	182220.0	44.0	51	Grand Est	49.2514906066	4.0402302322	51454.0	Théâtre	1	vivant
-Reims	182220.0	44.0	51	Grand Est	49.2514906066	4.0402302322	51454.0	Établissement d'enseignement supérieur	1	Strange
 Cœur-de-la-Vallée	654.0	44.0	51	Grand Est	49.085169468	3.81305711475	51457.0	Monument	1	patrimoine
 Reuves	61.0	44.0	51	Grand Est	48.7982990232	3.80208051062	51458.0	Monument	1	patrimoine
 Réveillon	108.0	44.0	51	Grand Est	48.7494077104	3.45568014336	51459.0	Monument	1	patrimoine
@@ -21722,7 +21691,6 @@ Nancy	105753.0	44.0	54	Grand Est	48.6901995499	6.17588254434	54395.0	Parc et jar
 Nancy	105753.0	44.0	54	Grand Est	48.6901995499	6.17588254434	54395.0	Scène	1	vivant
 Nancy	105753.0	44.0	54	Grand Est	48.6901995499	6.17588254434	54395.0	Service d'archives	3	patrimoine
 Nancy	105753.0	44.0	54	Grand Est	48.6901995499	6.17588254434	54395.0	Théâtre	1	vivant
-Nancy	105753.0	44.0	54	Grand Est	48.6901995499	6.17588254434	54395.0	Établissement d'enseignement supérieur	2	Strange
 Neuves-Maisons	6666.0	44.0	54	Grand Est	48.6147598668	6.10912661259	54397.0	Monument	1	patrimoine
 Neuviller-sur-Moselle	253.0	44.0	54	Grand Est	48.4902431576	6.28177004556	54399.0	Monument	1	patrimoine
 Nomeny	1155.0	44.0	54	Grand Est	48.8776522651	6.23309013731	54400.0	Bibliothèque	1	vivant
@@ -22350,7 +22318,6 @@ Lorient	59317.0	53.0	56	Bretagne	47.7500486947	-3.37823200917	56121.0	Librairie	
 Lorient	59317.0	53.0	56	Bretagne	47.7500486947	-3.37823200917	56121.0	Monument	11	patrimoine
 Lorient	59317.0	53.0	56	Bretagne	47.7500486947	-3.37823200917	56121.0	Scène	1	vivant
 Lorient	59317.0	53.0	56	Bretagne	47.7500486947	-3.37823200917	56121.0	Service d'archives	2	patrimoine
-Lorient	59317.0	53.0	56	Bretagne	47.7500486947	-3.37823200917	56121.0	Établissement d'enseignement supérieur	1	Strange
 Loyat	1738.0	53.0	56	Bretagne	47.9922231376	-2.38391082278	56122.0	Bibliothèque	1	vivant
 Loyat	1738.0	53.0	56	Bretagne	47.9922231376	-2.38391082278	56122.0	Monument	2	patrimoine
 Malansac	2285.0	53.0	56	Bretagne	47.6861486744	-2.2997401984	56123.0	Bibliothèque	1	vivant
@@ -22884,7 +22851,6 @@ Metz	122714.0	44.0	57	Grand Est	49.1081133279	6.1955245421	57463.0	Musée	3	viva
 Metz	122714.0	44.0	57	Grand Est	49.1081133279	6.1955245421	57463.0	Scène	1	vivant
 Metz	122714.0	44.0	57	Grand Est	49.1081133279	6.1955245421	57463.0	Service d'archives	2	patrimoine
 Metz	122714.0	44.0	57	Grand Est	49.1081133279	6.1955245421	57463.0	Théâtre	3	vivant
-Metz	122714.0	44.0	57	Grand Est	49.1081133279	6.1955245421	57463.0	Établissement d'enseignement supérieur	2	Strange
 Mey	311.0	44.0	57	Grand Est	49.1370275752	6.24143707513	57467.0	Monument	2	patrimoine
 Mondelange	5777.0	44.0	57	Grand Est	49.2630401785	6.17244194206	57474.0	Bibliothèque	1	vivant
 Mondorff	564.0	44.0	57	Grand Est	49.5020535838	6.25578622629	57475.0	Monument	1	patrimoine
@@ -23421,7 +23387,6 @@ Villeneuve-d'Ascq	62700.0	32.0	59	Hauts-de-France	50.6324372393	3.1535257221	590
 Villeneuve-d'Ascq	62700.0	32.0	59	Hauts-de-France	50.6324372393	3.1535257221	59009.0	Scène	1	vivant
 Villeneuve-d'Ascq	62700.0	32.0	59	Hauts-de-France	50.6324372393	3.1535257221	59009.0	Service d'archives	1	patrimoine
 Villeneuve-d'Ascq	62700.0	32.0	59	Hauts-de-France	50.6324372393	3.1535257221	59009.0	Théâtre	1	vivant
-Villeneuve-d'Ascq	62700.0	32.0	59	Hauts-de-France	50.6324372393	3.1535257221	59009.0	Établissement d'enseignement supérieur	1	Strange
 Annœullin	10879.0	32.0	59	Hauts-de-France	50.5265153703	2.92753629479	59011.0	Bibliothèque	1	vivant
 Anor	3240.0	32.0	59	Hauts-de-France	49.9949415311	4.11785622281	59012.0	Bibliothèque	1	vivant
 Anstaing	1626.0	32.0	59	Hauts-de-France	50.603523536	3.18920215192	59013.0	Bibliothèque	1	vivant
@@ -23471,7 +23436,6 @@ Avesnes-sur-Helpe	4254.0	32.0	59	Hauts-de-France	50.1242937124	3.92754898552	590
 Avesnes-sur-Helpe	4254.0	32.0	59	Hauts-de-France	50.1242937124	3.92754898552	59036.0	Musée	1	vivant
 Avesnes-les-Aubert	3647.0	32.0	59	Hauts-de-France	50.1911782213	3.37676857334	59037.0	Bibliothèque	1	vivant
 Avesnes-le-Sec	1465.0	32.0	59	Hauts-de-France	50.2483988689	3.37145460907	59038.0	Monument	1	patrimoine
-Awoingt	814.0	32.0	59	Hauts-de-France	50.153637436	3.28601914646	59039.0	Établissement d'enseignement supérieur	1	Strange
 Bachy	1915.0	32.0	59	Hauts-de-France	50.5435916608	3.26883958433	59042.0	Bibliothèque	1	vivant
 Bailleul	15098.0	32.0	59	Hauts-de-France	50.7274252798	2.7379912081	59043.0	Bibliothèque	2	vivant
 Bailleul	15098.0	32.0	59	Hauts-de-France	50.7274252798	2.7379912081	59043.0	Cinéma	1	vivant
@@ -23645,7 +23609,6 @@ Dunkerque	88024.0	32.0	59	Hauts-de-France	51.0307229078	2.33752414095	59183.0	Mu
 Dunkerque	88024.0	32.0	59	Hauts-de-France	51.0307229078	2.33752414095	59183.0	Scène	1	vivant
 Dunkerque	88024.0	32.0	59	Hauts-de-France	51.0307229078	2.33752414095	59183.0	Service d'archives	1	patrimoine
 Dunkerque	88024.0	32.0	59	Hauts-de-France	51.0307229078	2.33752414095	59183.0	Théâtre	1	vivant
-Dunkerque	88024.0	32.0	59	Hauts-de-France	51.0307229078	2.33752414095	59183.0	Établissement d'enseignement supérieur	1	Strange
 Écaillon	1924.0	32.0	59	Hauts-de-France	50.3482315234	3.21529635453	59185.0	Bibliothèque	1	vivant
 Écaillon	1924.0	32.0	59	Hauts-de-France	50.3482315234	3.21529635453	59185.0	Monument	1	patrimoine
 Écuélin	145.0	32.0	59	Hauts-de-France	50.1924531151	3.89604149257	59188.0	Monument	1	patrimoine
@@ -23684,7 +23647,6 @@ Estrun	727.0	32.0	59	Hauts-de-France	50.2447242764	3.29498867507	59219.0	Monumen
 Faches-Thumesnil	18227.0	32.0	59	Hauts-de-France	50.593618421	3.07229537426	59220.0	Bibliothèque	1	vivant
 Famars	2543.0	32.0	59	Hauts-de-France	50.3123396289	3.52179790977	59221.0	Bibliothèque	1	vivant
 Famars	2543.0	32.0	59	Hauts-de-France	50.3123396289	3.52179790977	59221.0	Monument	1	patrimoine
-Famars	2543.0	32.0	59	Hauts-de-France	50.3123396289	3.52179790977	59221.0	Établissement d'enseignement supérieur	1	Strange
 Faumont	2297.0	32.0	59	Hauts-de-France	50.4531008477	3.13526855992	59222.0	Bibliothèque	1	vivant
 Féchain	1671.0	32.0	59	Hauts-de-France	50.268615561	3.212900112	59224.0	Bibliothèque	1	vivant
 Féchain	1671.0	32.0	59	Hauts-de-France	50.268615561	3.212900112	59224.0	Monument	1	patrimoine
@@ -23855,7 +23817,6 @@ Lille	238542.0	32.0	59	Hauts-de-France	50.6317183168	3.04783272312	59350.0	Opér
 Lille	238542.0	32.0	59	Hauts-de-France	50.6317183168	3.04783272312	59350.0	Scène	3	vivant
 Lille	238542.0	32.0	59	Hauts-de-France	50.6317183168	3.04783272312	59350.0	Service d'archives	7	patrimoine
 Lille	238542.0	32.0	59	Hauts-de-France	50.6317183168	3.04783272312	59350.0	Théâtre	3	vivant
-Lille	238542.0	32.0	59	Hauts-de-France	50.6317183168	3.04783272312	59350.0	Établissement d'enseignement supérieur	2	Strange
 Limont-Fontaine	546.0	32.0	59	Hauts-de-France	50.2155213802	3.92291118633	59351.0	Bibliothèque	2	vivant
 Linselles	8282.0	32.0	59	Hauts-de-France	50.7361350171	3.0744786004	59352.0	Monument	1	patrimoine
 La Longueville	2092.0	32.0	59	Hauts-de-France	50.2961357977	3.87102048316	59357.0	Bibliothèque	1	vivant
@@ -24139,7 +24100,6 @@ Tourcoing	99679.0	32.0	59	Hauts-de-France	50.7254418902	3.15882757215	59599.0	Mu
 Tourcoing	99679.0	32.0	59	Hauts-de-France	50.7254418902	3.15882757215	59599.0	Scène	1	vivant
 Tourcoing	99679.0	32.0	59	Hauts-de-France	50.7254418902	3.15882757215	59599.0	Service d'archives	1	patrimoine
 Tourcoing	99679.0	32.0	59	Hauts-de-France	50.7254418902	3.15882757215	59599.0	Théâtre	2	vivant
-Tourcoing	99679.0	32.0	59	Hauts-de-France	50.7254418902	3.15882757215	59599.0	Établissement d'enseignement supérieur	2	Strange
 Tourmignies	963.0	32.0	59	Hauts-de-France	50.5041629351	3.08506088086	59600.0	Monument	1	patrimoine
 Trélon	2746.0	32.0	59	Hauts-de-France	50.0755155252	4.12172301875	59601.0	Bibliothèque	1	vivant
 Trélon	2746.0	32.0	59	Hauts-de-France	50.0755155252	4.12172301875	59601.0	Monument	1	patrimoine
@@ -25928,7 +25888,6 @@ Clermont-Ferrand	149830.0	84.0	63	Auvergne-Rhône-Alpes	45.7856492991	3.11554542
 Clermont-Ferrand	149830.0	84.0	63	Auvergne-Rhône-Alpes	45.7856492991	3.11554542903	63113.0	Scène	2	vivant
 Clermont-Ferrand	149830.0	84.0	63	Auvergne-Rhône-Alpes	45.7856492991	3.11554542903	63113.0	Service d'archives	4	patrimoine
 Clermont-Ferrand	149830.0	84.0	63	Auvergne-Rhône-Alpes	45.7856492991	3.11554542903	63113.0	Théâtre	4	vivant
-Clermont-Ferrand	149830.0	84.0	63	Auvergne-Rhône-Alpes	45.7856492991	3.11554542903	63113.0	Établissement d'enseignement supérieur	2	Strange
 Combronde	2189.0	84.0	63	Auvergne-Rhône-Alpes	45.9858171361	3.08063423598	63116.0	Bibliothèque	1	vivant
 Combronde	2189.0	84.0	63	Auvergne-Rhône-Alpes	45.9858171361	3.08063423598	63116.0	Monument	5	patrimoine
 Compains	130.0	84.0	63	Auvergne-Rhône-Alpes	45.4364463518	2.92462564486	63117.0	Monument	2	patrimoine
@@ -26397,7 +26356,6 @@ Arbonne	2410.0	75.0	64	Nouvelle-Aquitaine	43.4221190537	-1.54906516427	64035.0	B
 Arbonne	2410.0	75.0	64	Nouvelle-Aquitaine	43.4221190537	-1.54906516427	64035.0	Monument	2	patrimoine
 Arcangues	3526.0	75.0	64	Nouvelle-Aquitaine	43.4260778242	-1.51681726621	64038.0	Monument	3	patrimoine
 Arcangues	3526.0	75.0	64	Nouvelle-Aquitaine	43.4260778242	-1.51681726621	64038.0	Théâtre	1	vivant
-Arcangues	3526.0	75.0	64	Nouvelle-Aquitaine	43.4260778242	-1.51681726621	64038.0	Établissement d'enseignement supérieur	1	Strange
 Aren	255.0	75.0	64	Nouvelle-Aquitaine	43.2479579692	-0.725585017259	64039.0	Bibliothèque	1	vivant
 Aren	255.0	75.0	64	Nouvelle-Aquitaine	43.2479579692	-0.725585017259	64039.0	Monument	1	patrimoine
 Arette	1104.0	75.0	64	Nouvelle-Aquitaine	43.0398698092	-0.735693683266	64040.0	Monument	1	patrimoine
@@ -26448,7 +26406,6 @@ Bayonne	54029.0	75.0	64	Nouvelle-Aquitaine	43.4922254016	-1.46607674358	64102.0	
 Bayonne	54029.0	75.0	64	Nouvelle-Aquitaine	43.4922254016	-1.46607674358	64102.0	Musée	3	vivant
 Bayonne	54029.0	75.0	64	Nouvelle-Aquitaine	43.4922254016	-1.46607674358	64102.0	Scène	1	vivant
 Bayonne	54029.0	75.0	64	Nouvelle-Aquitaine	43.4922254016	-1.46607674358	64102.0	Service d'archives	2	patrimoine
-Bayonne	54029.0	75.0	64	Nouvelle-Aquitaine	43.4922254016	-1.46607674358	64102.0	Établissement d'enseignement supérieur	1	Strange
 Bedous	597.0	75.0	64	Nouvelle-Aquitaine	43.0056214728	-0.588165067203	64104.0	Bibliothèque	1	vivant
 Bedous	597.0	75.0	64	Nouvelle-Aquitaine	43.0056214728	-0.588165067203	64104.0	Monument	1	patrimoine
 Béguios	278.0	75.0	64	Nouvelle-Aquitaine	43.3510821409	-1.09745249473	64105.0	Monument	1	patrimoine
@@ -26702,7 +26659,6 @@ Pau	78375.0	75.0	64	Nouvelle-Aquitaine	43.3200189773	-0.350337918181	64445.0	Mus
 Pau	78375.0	75.0	64	Nouvelle-Aquitaine	43.3200189773	-0.350337918181	64445.0	Scène	3	vivant
 Pau	78375.0	75.0	64	Nouvelle-Aquitaine	43.3200189773	-0.350337918181	64445.0	Service d'archives	3	patrimoine
 Pau	78375.0	75.0	64	Nouvelle-Aquitaine	43.3200189773	-0.350337918181	64445.0	Théâtre	1	vivant
-Pau	78375.0	75.0	64	Nouvelle-Aquitaine	43.3200189773	-0.350337918181	64445.0	Établissement d'enseignement supérieur	1	Strange
 Poey-de-Lescar	1871.0	75.0	64	Nouvelle-Aquitaine	43.3557464475	-0.457046076502	64448.0	Bibliothèque	1	vivant
 Pontacq	2962.0	75.0	64	Nouvelle-Aquitaine	43.1983211463	-0.103500734217	64453.0	Bibliothèque	1	vivant
 Pontacq	2962.0	75.0	64	Nouvelle-Aquitaine	43.1983211463	-0.103500734217	64453.0	Monument	2	patrimoine
@@ -27012,7 +26968,6 @@ Tarbes	44941.0	76.0	65	Occitanie	43.2347859635	0.0660093937851	65440.0	Parc et j
 Tarbes	44941.0	76.0	65	Occitanie	43.2347859635	0.0660093937851	65440.0	Scène	1	vivant
 Tarbes	44941.0	76.0	65	Occitanie	43.2347859635	0.0660093937851	65440.0	Service d'archives	2	patrimoine
 Tarbes	44941.0	76.0	65	Occitanie	43.2347859635	0.0660093937851	65440.0	Théâtre	4	vivant
-Tarbes	44941.0	76.0	65	Occitanie	43.2347859635	0.0660093937851	65440.0	Établissement d'enseignement supérieur	1	Strange
 Thermes-Magnoac	224.0	76.0	65	Occitanie	43.2974962072	0.603217695988	65442.0	Parc et jardin	1	patrimoine
 Tibiran-Jaunac	328.0	76.0	65	Occitanie	43.0523720905	0.549033475405	65444.0	Monument	1	patrimoine
 Tilhouse	234.0	76.0	65	Occitanie	43.0848937897	0.309988769457	65445.0	Bibliothèque	1	vivant
@@ -27827,7 +27782,6 @@ Strasbourg	294229.0	44.0	67	Grand Est	48.5712679849	7.76752679517	67482.0	Parc e
 Strasbourg	294229.0	44.0	67	Grand Est	48.5712679849	7.76752679517	67482.0	Scène	1	vivant
 Strasbourg	294229.0	44.0	67	Grand Est	48.5712679849	7.76752679517	67482.0	Service d'archives	3	patrimoine
 Strasbourg	294229.0	44.0	67	Grand Est	48.5712679849	7.76752679517	67482.0	Théâtre	10	vivant
-Strasbourg	294229.0	44.0	67	Grand Est	48.5712679849	7.76752679517	67482.0	Établissement d'enseignement supérieur	4	Strange
 Struth	225.0	44.0	67	Grand Est	48.8951838329	7.26857056944	67483.0	Monument	2	patrimoine
 Stundwiller	504.0	44.0	67	Grand Est	48.9244859775	7.99641194102	67484.0	Bibliothèque	1	vivant
 Stutzheim-Offenheim	1674.0	44.0	67	Grand Est	48.6266854677	7.62711611103	67485.0	Monument	1	patrimoine
@@ -28075,7 +28029,6 @@ Mulhouse	107562.0	44.0	68	Grand Est	47.749163303	7.32570047509	68224.0	Parc et j
 Mulhouse	107562.0	44.0	68	Grand Est	47.749163303	7.32570047509	68224.0	Scène	2	vivant
 Mulhouse	107562.0	44.0	68	Grand Est	47.749163303	7.32570047509	68224.0	Service d'archives	1	patrimoine
 Mulhouse	107562.0	44.0	68	Grand Est	47.749163303	7.32570047509	68224.0	Théâtre	2	vivant
-Mulhouse	107562.0	44.0	68	Grand Est	47.749163303	7.32570047509	68224.0	Établissement d'enseignement supérieur	1	Strange
 Munster	4790.0	44.0	68	Grand Est	48.0448514207	7.14149744282	68226.0	Bibliothèque	1	vivant
 Munster	4790.0	44.0	68	Grand Est	48.0448514207	7.14149744282	68226.0	Cinéma	1	vivant
 Munster	4790.0	44.0	68	Grand Est	48.0448514207	7.14149744282	68226.0	Monument	6	patrimoine
@@ -28393,7 +28346,6 @@ Lucenay	2108.0	84.0	69	Auvergne-Rhône-Alpes	45.9134609573	4.70939043822	69122.0
 							69123.0	Scène	4	vivant
 							69123.0	Service d'archives	3	patrimoine
 							69123.0	Théâtre	17	vivant
-							69123.0	Établissement d'enseignement supérieur	3	Strange
 Marcilly-d'Azergues	961.0	84.0	69	Auvergne-Rhône-Alpes	45.8679882645	4.73091611018	69125.0	Monument	1	patrimoine
 Marcy	865.0	84.0	69	Auvergne-Rhône-Alpes	45.9139105552	4.67605163558	69126.0	Monument	1	patrimoine
 Marcy-l'Étoile	3710.0	84.0	69	Auvergne-Rhône-Alpes	45.7852649435	4.71250416429	69127.0	Bibliothèque	1	vivant
@@ -28584,7 +28536,6 @@ Vaulx-en-Velin	52343.0	84.0	69	Auvergne-Rhône-Alpes	45.7858821061	4.92637767698
 Vaulx-en-Velin	52343.0	84.0	69	Auvergne-Rhône-Alpes	45.7858821061	4.92637767698	69256.0	Musée	1	vivant
 Vaulx-en-Velin	52343.0	84.0	69	Auvergne-Rhône-Alpes	45.7858821061	4.92637767698	69256.0	Service d'archives	1	patrimoine
 Vaulx-en-Velin	52343.0	84.0	69	Auvergne-Rhône-Alpes	45.7858821061	4.92637767698	69256.0	Théâtre	1	vivant
-Vaulx-en-Velin	52343.0	84.0	69	Auvergne-Rhône-Alpes	45.7858821061	4.92637767698	69256.0	Établissement d'enseignement supérieur	1	Strange
 Vaux-en-Beaujolais	1158.0	84.0	69	Auvergne-Rhône-Alpes	46.0460801697	4.57697750068	69257.0	Monument	1	patrimoine
 Vauxrenard	322.0	84.0	69	Auvergne-Rhône-Alpes	46.2172909716	4.63812595224	69258.0	Bibliothèque	1	vivant
 Vauxrenard	322.0	84.0	69	Auvergne-Rhône-Alpes	46.2172909716	4.63812595224	69258.0	Monument	2	patrimoine
@@ -29502,7 +29453,6 @@ Saint-Prix	210.0	27.0	71	Bourgogne-Franche-Comté	46.972172044	4.06111114828	714
 Saint-Racho	151.0	27.0	71	Bourgogne-Franche-Comté	46.2627274208	4.37370876485	71473.0	Monument	1	patrimoine
 Saint-Rémy	6695.0	27.0	71	Bourgogne-Franche-Comté	46.7602643306	4.82122632524	71475.0	Bibliothèque	1	vivant
 Saint-Rémy	6695.0	27.0	71	Bourgogne-Franche-Comté	46.7602643306	4.82122632524	71475.0	Monument	1	patrimoine
-Saint-Rémy	6695.0	27.0	71	Bourgogne-Franche-Comté	46.7602643306	4.82122632524	71475.0	Établissement d'enseignement supérieur	1	Strange
 Saint-Romain-sous-Gourdon	495.0	27.0	71	Bourgogne-Franche-Comté	46.6170899923	4.41147294378	71477.0	Monument	1	patrimoine
 Saint-Sernin-du-Plain	614.0	27.0	71	Bourgogne-Franche-Comté	46.892384215	4.61739889874	71480.0	Bibliothèque	1	vivant
 Saint-Sernin-du-Plain	614.0	27.0	71	Bourgogne-Franche-Comté	46.892384215	4.61739889874	71480.0	Monument	1	patrimoine
@@ -29804,7 +29754,6 @@ Le Mans	147800.0	52.0	72	Pays de la Loire	47.9885256718	0.200030493539	72181.0	M
 Le Mans	147800.0	52.0	72	Pays de la Loire	47.9885256718	0.200030493539	72181.0	Musée	3	vivant
 Le Mans	147800.0	52.0	72	Pays de la Loire	47.9885256718	0.200030493539	72181.0	Scène	7	vivant
 Le Mans	147800.0	52.0	72	Pays de la Loire	47.9885256718	0.200030493539	72181.0	Service d'archives	2	patrimoine
-Le Mans	147800.0	52.0	72	Pays de la Loire	47.9885256718	0.200030493539	72181.0	Établissement d'enseignement supérieur	1	Strange
 Mansigné	1567.0	52.0	72	Pays de la Loire	47.7413528401	0.133663213026	72182.0	Bibliothèque	1	vivant
 Mansigné	1567.0	52.0	72	Pays de la Loire	47.7413528401	0.133663213026	72182.0	Monument	1	patrimoine
 Marçon	1091.0	52.0	72	Pays de la Loire	47.7050367685	0.526673141254	72183.0	Bibliothèque	1	vivant
@@ -30347,7 +30296,6 @@ Annecy	134738.0	84.0	74	Auvergne-Rhône-Alpes	45.8906432566	6.12551773598	74010.
 Annecy	134738.0	84.0	74	Auvergne-Rhône-Alpes	45.8906432566	6.12551773598	74010.0	Scène	2	vivant
 Annecy	134738.0	84.0	74	Auvergne-Rhône-Alpes	45.8906432566	6.12551773598	74010.0	Service d'archives	3	patrimoine
 Annecy	134738.0	84.0	74	Auvergne-Rhône-Alpes	45.8906432566	6.12551773598	74010.0	Théâtre	2	vivant
-Annecy	134738.0	84.0	74	Auvergne-Rhône-Alpes	45.8906432566	6.12551773598	74010.0	Établissement d'enseignement supérieur	1	Strange
 Annemasse	38314.0	84.0	74	Auvergne-Rhône-Alpes	46.1909730986	6.24250704322	74012.0	Bibliothèque	5	vivant
 Annemasse	38314.0	84.0	74	Auvergne-Rhône-Alpes	46.1909730986	6.24250704322	74012.0	Centre d'art	1	vivant
 Annemasse	38314.0	84.0	74	Auvergne-Rhône-Alpes	46.1909730986	6.24250704322	74012.0	Cinéma	3	vivant
@@ -30690,7 +30638,6 @@ Yvoire	1091.0	84.0	74	Auvergne-Rhône-Alpes	46.3635082871	6.33214094024	74315.0	
 							75056.0	Scène	4	vivant
 							75056.0	Service d'archives	2	patrimoine
 							75056.0	Théâtre	159	vivant
-							75056.0	Établissement d'enseignement supérieur	15	Strange
 Alvimare	617.0	28.0	76	Normandie	49.6071633233	0.63205346079	76002.0	Monument	2	patrimoine
 Amfreville-la-Mi-Voie	3326.0	28.0	76	Normandie	49.4044285564	1.12471250441	76005.0	Bibliothèque	1	vivant
 Anceaumeville	695.0	28.0	76	Normandie	49.5695149287	1.06535432644	76007.0	Bibliothèque	1	vivant
@@ -30768,7 +30715,6 @@ Bosc-le-Hard	1597.0	28.0	76	Normandie	49.6217325927	1.18584148284	76125.0	Biblio
 Bosc-le-Hard	1597.0	28.0	76	Normandie	49.6217325927	1.18584148284	76125.0	Monument	1	patrimoine
 Boudeville	219.0	28.0	76	Normandie	49.7200445061	0.874466208058	76129.0	Bibliothèque	1	vivant
 Bouelles	276.0	28.0	76	Normandie	49.7223152226	1.49218753372	76130.0	Monument	1	patrimoine
-Bouelles	276.0	28.0	76	Normandie	49.7223152226	1.49218753372	76130.0	Établissement d'enseignement supérieur	1	Strange
 La Bouille	720.0	28.0	76	Normandie	49.3502404856	0.933749684958	76131.0	Monument	3	patrimoine
 Le Bourg-Dun	437.0	28.0	76	Normandie	49.8702714225	0.892619905742	76133.0	Bibliothèque	1	vivant
 Le Bourg-Dun	437.0	28.0	76	Normandie	49.8702714225	0.892619905742	76133.0	Monument	2	patrimoine
@@ -30831,7 +30777,6 @@ Dampierre-en-Bray	454.0	28.0	76	Normandie	49.5345937963	1.66314096949	76209.0	Mo
 Darnétal	9812.0	28.0	76	Normandie	49.4445058359	1.15546994024	76212.0	Bibliothèque	1	vivant
 Darnétal	9812.0	28.0	76	Normandie	49.4445058359	1.15546994024	76212.0	Monument	2	patrimoine
 Darnétal	9812.0	28.0	76	Normandie	49.4445058359	1.15546994024	76212.0	Service d'archives	1	patrimoine
-Darnétal	9812.0	28.0	76	Normandie	49.4445058359	1.15546994024	76212.0	Établissement d'enseignement supérieur	1	Strange
 Daubeuf-Serville	405.0	28.0	76	Normandie	49.6960147715	0.481684076028	76213.0	Monument	1	patrimoine
 Déville-lès-Rouen	10807.0	28.0	76	Normandie	49.4661147987	1.0514305734	76216.0	Bibliothèque	1	vivant
 Déville-lès-Rouen	10807.0	28.0	76	Normandie	49.4661147987	1.0514305734	76216.0	Service d'archives	1	patrimoine
@@ -30986,7 +30931,6 @@ Le Havre	167838.0	28.0	76	Normandie	49.498452502	0.140153719153	76351.0	Parc et 
 Le Havre	167838.0	28.0	76	Normandie	49.498452502	0.140153719153	76351.0	Scène	2	vivant
 Le Havre	167838.0	28.0	76	Normandie	49.498452502	0.140153719153	76351.0	Service d'archives	1	patrimoine
 Le Havre	167838.0	28.0	76	Normandie	49.498452502	0.140153719153	76351.0	Théâtre	4	vivant
-Le Havre	167838.0	28.0	76	Normandie	49.498452502	0.140153719153	76351.0	Établissement d'enseignement supérieur	1	Strange
 Hénouville	1405.0	28.0	76	Normandie	49.4750504907	0.951322211324	76354.0	Bibliothèque	1	vivant
 Hénouville	1405.0	28.0	76	Normandie	49.4750504907	0.951322211324	76354.0	Monument	2	patrimoine
 Héricourt-en-Caux	972.0	28.0	76	Normandie	49.6945647132	0.703298734705	76355.0	Monument	2	patrimoine
@@ -31146,7 +31090,6 @@ Rouen	115639.0	28.0	76	Normandie	49.4413460103	1.09256784278	76540.0	Opéra	1	vi
 Rouen	115639.0	28.0	76	Normandie	49.4413460103	1.09256784278	76540.0	Scène	1	vivant
 Rouen	115639.0	28.0	76	Normandie	49.4413460103	1.09256784278	76540.0	Service d'archives	4	patrimoine
 Rouen	115639.0	28.0	76	Normandie	49.4413460103	1.09256784278	76540.0	Théâtre	2	vivant
-Rouen	115639.0	28.0	76	Normandie	49.4413460103	1.09256784278	76540.0	Établissement d'enseignement supérieur	1	Strange
 Roumare	1576.0	28.0	76	Normandie	49.507884098	0.968583908754	76541.0	Bibliothèque	1	vivant
 Roumare	1576.0	28.0	76	Normandie	49.507884098	0.968583908754	76541.0	Monument	2	patrimoine
 Ry	791.0	28.0	76	Normandie	49.4733163015	1.33609831586	76548.0	Bibliothèque	1	vivant
@@ -31421,7 +31364,6 @@ Champs-sur-Marne	25845.0	11.0	77	Île-de-France	48.8483311726	2.59610325483	7708
 Champs-sur-Marne	25845.0	11.0	77	Île-de-France	48.8483311726	2.59610325483	77083.0	Parc et jardin	1	patrimoine
 Champs-sur-Marne	25845.0	11.0	77	Île-de-France	48.8483311726	2.59610325483	77083.0	Service d'archives	1	patrimoine
 Champs-sur-Marne	25845.0	11.0	77	Île-de-France	48.8483311726	2.59610325483	77083.0	Théâtre	1	vivant
-Champs-sur-Marne	25845.0	11.0	77	Île-de-France	48.8483311726	2.59610325483	77083.0	Établissement d'enseignement supérieur	1	Strange
 Chanteloup-en-Brie	4225.0	11.0	77	Île-de-France	48.8577766033	2.74039391563	77085.0	Bibliothèque	1	vivant
 La Chapelle-Gauthier	1426.0	11.0	77	Île-de-France	48.5306744733	2.86286787769	77086.0	Bibliothèque	1	vivant
 La Chapelle-Gauthier	1426.0	11.0	77	Île-de-France	48.5306744733	2.86286787769	77086.0	Monument	2	patrimoine
@@ -32442,7 +32384,6 @@ Versailles	85407.0	11.0	78	Île-de-France	48.8025669671	2.11789297191	78646.0	Mu
 Versailles	85407.0	11.0	78	Île-de-France	48.8025669671	2.11789297191	78646.0	Parc et jardin	3	patrimoine
 Versailles	85407.0	11.0	78	Île-de-France	48.8025669671	2.11789297191	78646.0	Service d'archives	2	patrimoine
 Versailles	85407.0	11.0	78	Île-de-France	48.8025669671	2.11789297191	78646.0	Théâtre	1	vivant
-Versailles	85407.0	11.0	78	Île-de-France	48.8025669671	2.11789297191	78646.0	Établissement d'enseignement supérieur	1	Strange
 Vert	869.0	11.0	78	Île-de-France	48.9403014358	1.68320274306	78647.0	Bibliothèque	2	vivant
 Le Vésinet	16117.0	11.0	78	Île-de-France	48.8938640591	2.13039312004	78650.0	Bibliothèque	1	vivant
 Le Vésinet	16117.0	11.0	78	Île-de-France	48.8938640591	2.13039312004	78650.0	Cinéma	1	vivant
@@ -32825,7 +32766,6 @@ Amiens	136265.0	32.0	80	Hauts-de-France	49.9009532186	2.29007445539	80021.0	Parc
 Amiens	136265.0	32.0	80	Hauts-de-France	49.9009532186	2.29007445539	80021.0	Scène	5	vivant
 Amiens	136265.0	32.0	80	Hauts-de-France	49.9009532186	2.29007445539	80021.0	Service d'archives	3	patrimoine
 Amiens	136265.0	32.0	80	Hauts-de-France	49.9009532186	2.29007445539	80021.0	Théâtre	2	vivant
-Amiens	136265.0	32.0	80	Hauts-de-France	49.9009532186	2.29007445539	80021.0	Établissement d'enseignement supérieur	1	Strange
 Argœuves	552.0	32.0	80	Hauts-de-France	49.9413936849	2.24676238077	80024.0	Bibliothèque	1	vivant
 Argœuves	552.0	32.0	80	Hauts-de-France	49.9413936849	2.24676238077	80024.0	Monument	1	patrimoine
 Argoules	328.0	32.0	80	Hauts-de-France	50.3376452337	1.81790740998	80025.0	Monument	2	patrimoine
@@ -33987,7 +33927,6 @@ Toulon	182244.0	93.0	83	Provence-Alpes-Côte d'Azur	43.1361589728	5.93239634249	
 Toulon	182244.0	93.0	83	Provence-Alpes-Côte d'Azur	43.1361589728	5.93239634249	83137.0	Scène	3	vivant
 Toulon	182244.0	93.0	83	Provence-Alpes-Côte d'Azur	43.1361589728	5.93239634249	83137.0	Service d'archives	2	patrimoine
 Toulon	182244.0	93.0	83	Provence-Alpes-Côte d'Azur	43.1361589728	5.93239634249	83137.0	Théâtre	1	vivant
-Toulon	182244.0	93.0	83	Provence-Alpes-Côte d'Azur	43.1361589728	5.93239634249	83137.0	Établissement d'enseignement supérieur	1	Strange
 Tourrettes	2925.0	93.0	83	Provence-Alpes-Côte d'Azur	43.6140539601	6.72378364475	83138.0	Bibliothèque	1	vivant
 Tourrettes	2925.0	93.0	83	Provence-Alpes-Côte d'Azur	43.6140539601	6.72378364475	83138.0	Monument	2	patrimoine
 Tourtour	599.0	93.0	83	Provence-Alpes-Côte d'Azur	43.5935800875	6.310682972	83139.0	Bibliothèque	1	vivant
@@ -34049,7 +33988,6 @@ Avignon	91878.0	93.0	84	Provence-Alpes-Côte d'Azur	43.9352448339	4.84071572505	
 Avignon	91878.0	93.0	84	Provence-Alpes-Côte d'Azur	43.9352448339	4.84071572505	84007.0	Scène	2	vivant
 Avignon	91878.0	93.0	84	Provence-Alpes-Côte d'Azur	43.9352448339	4.84071572505	84007.0	Service d'archives	4	patrimoine
 Avignon	91878.0	93.0	84	Provence-Alpes-Côte d'Azur	43.9352448339	4.84071572505	84007.0	Théâtre	14	vivant
-Avignon	91878.0	93.0	84	Provence-Alpes-Côte d'Azur	43.9352448339	4.84071572505	84007.0	Établissement d'enseignement supérieur	1	Strange
 Le Barroux	686.0	93.0	84	Provence-Alpes-Côte d'Azur	44.1547724058	5.09918948911	84008.0	Bibliothèque	1	vivant
 Le Barroux	686.0	93.0	84	Provence-Alpes-Côte d'Azur	44.1547724058	5.09918948911	84008.0	Monument	3	patrimoine
 La Bastide-des-Jourdans	1778.0	93.0	84	Provence-Alpes-Côte d'Azur	43.7945397599	5.64677782095	84009.0	Bibliothèque	1	vivant
@@ -35066,7 +35004,6 @@ Poitiers	92513.0	75.0	86	Nouvelle-Aquitaine	46.5839207726	0.359947653003	86194.0
 Poitiers	92513.0	75.0	86	Nouvelle-Aquitaine	46.5839207726	0.359947653003	86194.0	Musée	6	vivant
 Poitiers	92513.0	75.0	86	Nouvelle-Aquitaine	46.5839207726	0.359947653003	86194.0	Scène	3	vivant
 Poitiers	92513.0	75.0	86	Nouvelle-Aquitaine	46.5839207726	0.359947653003	86194.0	Service d'archives	4	patrimoine
-Poitiers	92513.0	75.0	86	Nouvelle-Aquitaine	46.5839207726	0.359947653003	86194.0	Établissement d'enseignement supérieur	2	Strange
 Port-de-Piles	563.0	75.0	86	Nouvelle-Aquitaine	46.9999667755	0.59772473181	86195.0	Bibliothèque	1	vivant
 Pouant	426.0	75.0	86	Nouvelle-Aquitaine	47.0188564261	0.278071701384	86197.0	Monument	1	patrimoine
 Pouillé	733.0	75.0	86	Nouvelle-Aquitaine	46.5420045023	0.578924687595	86198.0	Monument	1	patrimoine
@@ -35332,7 +35269,6 @@ Limoges	131770.0	75.0	87	Nouvelle-Aquitaine	45.8542549589	1.2487579024	87085.0	M
 Limoges	131770.0	75.0	87	Nouvelle-Aquitaine	45.8542549589	1.2487579024	87085.0	Scène	3	vivant
 Limoges	131770.0	75.0	87	Nouvelle-Aquitaine	45.8542549589	1.2487579024	87085.0	Service d'archives	3	patrimoine
 Limoges	131770.0	75.0	87	Nouvelle-Aquitaine	45.8542549589	1.2487579024	87085.0	Théâtre	3	vivant
-Limoges	131770.0	75.0	87	Nouvelle-Aquitaine	45.8542549589	1.2487579024	87085.0	Établissement d'enseignement supérieur	1	Strange
 Linards	1026.0	75.0	87	Nouvelle-Aquitaine	45.7038935854	1.5375026125	87086.0	Monument	1	patrimoine
 Lussac-les-Églises	466.0	75.0	87	Nouvelle-Aquitaine	46.341752819	1.17591592466	87087.0	Bibliothèque	1	vivant
 Magnac-Bourg	1134.0	75.0	87	Nouvelle-Aquitaine	45.6008431539	1.43562609799	87088.0	Bibliothèque	1	vivant
@@ -35466,7 +35402,6 @@ Saint-Priest-Ligoure	691.0	75.0	87	Nouvelle-Aquitaine	45.6262243469	1.300363986	
 Saint-Priest-sous-Aixe	1810.0	75.0	87	Nouvelle-Aquitaine	45.8204298381	1.08391374375	87177.0	Bibliothèque	1	vivant
 Saint-Priest-Taurion	2922.0	75.0	87	Nouvelle-Aquitaine	45.8976553193	1.3966265023	87178.0	Bibliothèque	1	vivant
 Saint-Priest-Taurion	2922.0	75.0	87	Nouvelle-Aquitaine	45.8976553193	1.3966265023	87178.0	Monument	2	patrimoine
-Saint-Priest-Taurion	2922.0	75.0	87	Nouvelle-Aquitaine	45.8976553193	1.3966265023	87178.0	Établissement d'enseignement supérieur	1	Strange
 Saint-Sornin-Leulac	569.0	75.0	87	Nouvelle-Aquitaine	46.1961790714	1.29766583914	87180.0	Bibliothèque	1	vivant
 Saint-Sulpice-Laurière	829.0	75.0	87	Nouvelle-Aquitaine	46.0553034205	1.4770215698	87181.0	Bibliothèque	1	vivant
 Saint-Sulpice-Laurière	829.0	75.0	87	Nouvelle-Aquitaine	46.0553034205	1.4770215698	87181.0	Monument	1	patrimoine
@@ -35623,7 +35558,6 @@ Dounoux	880.0	44.0	88	Grand Est	48.1074042749	6.43956295343	88157.0	Bibliothèqu
 Épinal	33633.0	44.0	88	Grand Est	48.1631202656	6.47989286928	88160.0	Musée	3	vivant
 Épinal	33633.0	44.0	88	Grand Est	48.1631202656	6.47989286928	88160.0	Scène	1	vivant
 Épinal	33633.0	44.0	88	Grand Est	48.1631202656	6.47989286928	88160.0	Service d'archives	3	patrimoine
-Épinal	33633.0	44.0	88	Grand Est	48.1631202656	6.47989286928	88160.0	Établissement d'enseignement supérieur	1	Strange
 Esley	182.0	44.0	88	Grand Est	48.1752203553	6.05828858575	88162.0	Bibliothèque	1	vivant
 Esley	182.0	44.0	88	Grand Est	48.1752203553	6.05828858575	88162.0	Monument	1	patrimoine
 Étival-Clairefontaine	2563.0	44.0	88	Grand Est	48.3643386923	6.84394360336	88165.0	Bibliothèque	2	vivant
@@ -36746,7 +36680,6 @@ Asnières-sur-Seine	90359.0	11.0	92	Île-de-France	48.9153530123	2.2880384663	92
 Asnières-sur-Seine	90359.0	11.0	92	Île-de-France	48.9153530123	2.2880384663	92004.0	Musée	1	vivant
 Asnières-sur-Seine	90359.0	11.0	92	Île-de-France	48.9153530123	2.2880384663	92004.0	Service d'archives	1	patrimoine
 Asnières-sur-Seine	90359.0	11.0	92	Île-de-France	48.9153530123	2.2880384663	92004.0	Théâtre	2	vivant
-Asnières-sur-Seine	90359.0	11.0	92	Île-de-France	48.9153530123	2.2880384663	92004.0	Établissement d'enseignement supérieur	1	Strange
 Bagneux	43874.0	11.0	92	Île-de-France	48.7983229866	2.30989995212	92007.0	Bibliothèque	1	vivant
 Bagneux	43874.0	11.0	92	Île-de-France	48.7983229866	2.30989995212	92007.0	Cinéma	1	vivant
 Bagneux	43874.0	11.0	92	Île-de-France	48.7983229866	2.30989995212	92007.0	Conservatoire	1	vivant
@@ -36767,7 +36700,6 @@ Boulogne-Billancourt	120954.0	11.0	92	Île-de-France	48.8365843138	2.23913599058
 Boulogne-Billancourt	120954.0	11.0	92	Île-de-France	48.8365843138	2.23913599058	92012.0	Musée	4	vivant
 Boulogne-Billancourt	120954.0	11.0	92	Île-de-France	48.8365843138	2.23913599058	92012.0	Service d'archives	1	patrimoine
 Boulogne-Billancourt	120954.0	11.0	92	Île-de-France	48.8365843138	2.23913599058	92012.0	Théâtre	3	vivant
-Boulogne-Billancourt	120954.0	11.0	92	Île-de-France	48.8365843138	2.23913599058	92012.0	Établissement d'enseignement supérieur	1	Strange
 Bourg-la-Reine	21116.0	11.0	92	Île-de-France	48.7799073627	2.31643010763	92014.0	Bibliothèque	1	vivant
 Bourg-la-Reine	21116.0	11.0	92	Île-de-France	48.7799073627	2.31643010763	92014.0	Cinéma	1	vivant
 Bourg-la-Reine	21116.0	11.0	92	Île-de-France	48.7799073627	2.31643010763	92014.0	Conservatoire	1	vivant
@@ -36972,7 +36904,6 @@ Aubervilliers	90259.0	11.0	93	Île-de-France	48.9121722626	2.38445513768	93001.0
 Aubervilliers	90259.0	11.0	93	Île-de-France	48.9121722626	2.38445513768	93001.0	Monument	4	patrimoine
 Aubervilliers	90259.0	11.0	93	Île-de-France	48.9121722626	2.38445513768	93001.0	Service d'archives	1	patrimoine
 Aubervilliers	90259.0	11.0	93	Île-de-France	48.9121722626	2.38445513768	93001.0	Théâtre	2	vivant
-Aubervilliers	90259.0	11.0	93	Île-de-France	48.9121722626	2.38445513768	93001.0	Établissement d'enseignement supérieur	1	Strange
 Aulnay-sous-Bois	86522.0	11.0	93	Île-de-France	48.9458384367	2.49329041687	93005.0	Bibliothèque	6	vivant
 Aulnay-sous-Bois	86522.0	11.0	93	Île-de-France	48.9458384367	2.49329041687	93005.0	Cinéma	2	vivant
 Aulnay-sous-Bois	86522.0	11.0	93	Île-de-France	48.9458384367	2.49329041687	93005.0	Conservatoire	1	vivant
@@ -37022,7 +36953,6 @@ La Courneuve	47289.0	11.0	93	Île-de-France	48.9322569546	2.39978064801	93027.0	
 La Courneuve	47289.0	11.0	93	Île-de-France	48.9322569546	2.39978064801	93027.0	Scène	1	vivant
 La Courneuve	47289.0	11.0	93	Île-de-France	48.9322569546	2.39978064801	93027.0	Service d'archives	1	patrimoine
 La Courneuve	47289.0	11.0	93	Île-de-France	48.9322569546	2.39978064801	93027.0	Théâtre	1	vivant
-La Courneuve	47289.0	11.0	93	Île-de-France	48.9322569546	2.39978064801	93027.0	Établissement d'enseignement supérieur	1	Strange
 Drancy	71619.0	11.0	93	Île-de-France	48.9234246259	2.44492688692	93029.0	Bibliothèque	5	vivant
 Drancy	71619.0	11.0	93	Île-de-France	48.9234246259	2.44492688692	93029.0	Cinéma	1	vivant
 Drancy	71619.0	11.0	93	Île-de-France	48.9234246259	2.44492688692	93029.0	Monument	3	patrimoine
@@ -37125,7 +37055,6 @@ Rosny-sous-Bois	45857.0	11.0	93	Île-de-France	48.8745763768	2.4863404591	93064.
 Rosny-sous-Bois	45857.0	11.0	93	Île-de-France	48.8745763768	2.4863404591	93064.0	Scène	1	vivant
 Rosny-sous-Bois	45857.0	11.0	93	Île-de-France	48.8745763768	2.4863404591	93064.0	Service d'archives	1	patrimoine
 Rosny-sous-Bois	45857.0	11.0	93	Île-de-France	48.8745763768	2.4863404591	93064.0	Théâtre	1	vivant
-Rosny-sous-Bois	45857.0	11.0	93	Île-de-France	48.8745763768	2.4863404591	93064.0	Établissement d'enseignement supérieur	1	Strange
 Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	Bibliothèque	6	vivant
 Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	Centre de création artistique	1	vivant
 Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	Cinéma	2	vivant
@@ -37135,7 +37064,6 @@ Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	M
 Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	Musée	1	vivant
 Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	Service d'archives	2	patrimoine
 Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	Théâtre	2	vivant
-Saint-Denis	114782.0	11.0	93	Île-de-France	48.9295650455	2.3592429975	93066.0	Établissement d'enseignement supérieur	1	Strange
 Saint-Ouen-sur-Seine	53320.0	11.0	93	Île-de-France	48.909806575	2.33257042205	93070.0	Bibliothèque	3	vivant
 Saint-Ouen-sur-Seine	53320.0	11.0	93	Île-de-France	48.909806575	2.33257042205	93070.0	Cinéma	1	vivant
 Saint-Ouen-sur-Seine	53320.0	11.0	93	Île-de-France	48.909806575	2.33257042205	93070.0	Conservatoire	1	vivant
@@ -37202,7 +37130,6 @@ Bry-sur-Marne	17720.0	11.0	94	Île-de-France	48.8384095661	2.52319657626	94015.0
 Bry-sur-Marne	17720.0	11.0	94	Île-de-France	48.8384095661	2.52319657626	94015.0	Monument	3	patrimoine
 Bry-sur-Marne	17720.0	11.0	94	Île-de-France	48.8384095661	2.52319657626	94015.0	Musée	1	vivant
 Bry-sur-Marne	17720.0	11.0	94	Île-de-France	48.8384095661	2.52319657626	94015.0	Service d'archives	1	patrimoine
-Bry-sur-Marne	17720.0	11.0	94	Île-de-France	48.8384095661	2.52319657626	94015.0	Établissement d'enseignement supérieur	1	Strange
 Cachan	30873.0	11.0	94	Île-de-France	48.7916121646	2.33153313164	94016.0	Bibliothèque	3	vivant
 Cachan	30873.0	11.0	94	Île-de-France	48.7916121646	2.33153313164	94016.0	Cinéma	1	vivant
 Cachan	30873.0	11.0	94	Île-de-France	48.7916121646	2.33153313164	94016.0	Conservatoire	1	vivant
@@ -37448,7 +37375,6 @@ Bezons	32122.0	11.0	95	Île-de-France	48.9259810125	2.21133387765	95063.0	Ciném
 Bezons	32122.0	11.0	95	Île-de-France	48.9259810125	2.21133387765	95063.0	Monument	1	patrimoine
 Bezons	32122.0	11.0	95	Île-de-France	48.9259810125	2.21133387765	95063.0	Scène	1	vivant
 Boisemont	876.0	11.0	95	Île-de-France	49.0186866586	2.00384200606	95074.0	Espace protégé	1	patrimoine
-Boisemont	876.0	11.0	95	Île-de-France	49.0186866586	2.00384200606	95074.0	Établissement d'enseignement supérieur	1	Strange
 Boissy-l'Aillerie	2054.0	11.0	95	Île-de-France	49.0831174161	2.03269283542	95078.0	Bibliothèque	1	vivant
 Boissy-l'Aillerie	2054.0	11.0	95	Île-de-France	49.0831174161	2.03269283542	95078.0	Monument	2	patrimoine
 Bouffémont	6642.0	11.0	95	Île-de-France	49.04157253	2.29838457991	95091.0	Bibliothèque	1	vivant
@@ -37870,7 +37796,6 @@ Fort-de-France	75627.0	2.0	972	Martinique	14.6411114389	-61.0691889244	97209.0	M
 Fort-de-France	75627.0	2.0	972	Martinique	14.6411114389	-61.0691889244	97209.0	Scène	1	vivant
 Fort-de-France	75627.0	2.0	972	Martinique	14.6411114389	-61.0691889244	97209.0	Service d'archives	3	patrimoine
 Fort-de-France	75627.0	2.0	972	Martinique	14.6411114389	-61.0691889244	97209.0	Théâtre	1	vivant
-Fort-de-France	75627.0	2.0	972	Martinique	14.6411114389	-61.0691889244	97209.0	Établissement d'enseignement supérieur	1	Strange
 Le François	16146.0	2.0	972	Martinique	14.6060564718	-60.9057158214	97210.0	Bibliothèque	1	vivant
 Le François	16146.0	2.0	972	Martinique	14.6060564718	-60.9057158214	97210.0	Lieu de mémoire	1	patrimoine
 Le François	16146.0	2.0	972	Martinique	14.6060564718	-60.9057158214	97210.0	Monument	3	patrimoine
@@ -37989,7 +37914,6 @@ Le Port	33595.0	4.0	974	La Réunion	-20.9448851377	55.305326715	97407.0	Biblioth
 Le Port	33595.0	4.0	974	La Réunion	-20.9448851377	55.305326715	97407.0	Monument	4	patrimoine
 Le Port	33595.0	4.0	974	La Réunion	-20.9448851377	55.305326715	97407.0	Scène	1	vivant
 Le Port	33595.0	4.0	974	La Réunion	-20.9448851377	55.305326715	97407.0	Service d'archives	2	patrimoine
-Le Port	33595.0	4.0	974	La Réunion	-20.9448851377	55.305326715	97407.0	Établissement d'enseignement supérieur	2	Strange
 La Possession	35680.0	4.0	974	La Réunion	-20.9940292693	55.3975084985	97408.0	Bibliothèque	1	vivant
 La Possession	35680.0	4.0	974	La Réunion	-20.9940292693	55.3975084985	97408.0	Monument	1	patrimoine
 La Possession	35680.0	4.0	974	La Réunion	-20.9940292693	55.3975084985	97408.0	Musée	1	vivant
