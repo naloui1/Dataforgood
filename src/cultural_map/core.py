@@ -7,13 +7,88 @@ from .components.map import create_map
 from .components.chat import process_chat_input
 
 
+@st.cache_data
+def load_and_prepare_data():
+    """Load and prepare the cultural data with caching."""
+    # Load the new CSV file with specified dtypes
+    dtypes = {
+        "Nom commune principale": str,
+        "Code Postal": str,
+        "Type": str,
+        "Nom d'evenement": str,
+        "etb_latitude": str,  # Will be converted to float later
+        "etb_longtitude": str,  # Will be converted to float later
+    }
+
+    data = pd.read_csv(
+        "data/results/_WITH_data_union_AS_SELECT_libelle_geographique_AS_Nom_commune_p_202411201007.csv",
+        sep=";",
+        encoding="utf-8",
+        dtype=dtypes,
+        low_memory=False,
+    )
+
+    # Define type mappings to categories
+    patrimoine_types = [
+        "Monument",
+        "Musée",
+        "Lieu archéologique",
+        "Service d'archives",
+        "Parc et jardin",
+        "Espace protégé",
+    ]
+
+    spectacle_vivant_types = [
+        "Théâtre",
+        "Cinéma",
+        "Bibliothèque",
+        "Conservatoire",
+        "Scène",
+        "Musique",
+        "Spectacle vivant",
+        "Pluridisciplinaire",
+        "Cinéma, audiovisuel",
+        "Livre, littérature",
+    ]
+
+    # Create DataFrame with required structure
+    transformed_data = pd.DataFrame(
+        {
+            "nom_commune": data["Nom commune principale"],
+            "code_postal": data["Code Postal"],
+            "type_infrastructure": data["Type"],
+            "nom_infrastructure": data["Nom d'evenement"],
+            "latitude": pd.to_numeric(
+                data["etb_latitude"].str.replace(",", "."), errors="coerce"
+            ),
+            "longitude": pd.to_numeric(
+                data["etb_longtitude"].str.replace(",", "."), errors="coerce"
+            ),
+        }
+    )
+
+    # Map types to categories
+    transformed_data["categorie"] = transformed_data["type_infrastructure"].apply(
+        lambda x: (
+            "patrimoine"
+            if x in patrimoine_types
+            else "spectacle_vivant" if x in spectacle_vivant_types else "patrimoine"
+        )  # Default to patrimoine for unknown types
+    )
+
+    # Drop rows with missing coordinates
+    transformed_data = transformed_data.dropna(subset=["latitude", "longitude"])
+
+    return transformed_data
+
+
 def main():
     """Main function to run the application."""
     # Setup the page
     setup_page()
 
-    # Load and prepare data
-    data = pd.read_csv("data/mock_cultural_data.csv")
+    # Load and prepare data (now cached)
+    data = load_and_prepare_data()
 
     # Create sidebar with filters and chat
     selected_categories, selected_types, selected_commune = create_sidebar(
