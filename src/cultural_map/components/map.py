@@ -52,7 +52,7 @@ def create_map(
     data, selected_categories=None, selected_types=None, selected_commune=None
 ):
     """
-    Create an interactive map with cultural infrastructure markers.
+    Create an interactive map with cultural infrastructure markers and density heatmap.
 
     Args:
         data (pd.DataFrame): DataFrame containing cultural infrastructure data
@@ -106,22 +106,31 @@ def create_map(
     # Sample data based on initial zoom level
     sampled_data = sample_data_by_zoom(filtered_data, initial_zoom)
 
-    # Create marker cluster
+    # Create marker cluster layer
     marker_cluster = plugins.MarkerCluster(
-        name="Clusters", overlay=True, control=True, icon_create_function=None
+        name="Équipements culturels",
+        overlay=True,
+        control=True,
+        icon_create_function=None,
     )
 
     # Add markers with type-specific styling and hover tooltips
     for _, row in sampled_data.iterrows():
         style = TYPE_STYLES.get(row["type_infrastructure"], DEFAULT_STYLE)
 
-        # Create tooltip content
+        # Format population with thousands separator
+        population = f"{int(row['population']):,}".replace(",", " ")
+        density = f"{row['cultural_density']:.1f}"
+
+        # Create tooltip content with population and density info
         tooltip_content = f"""
         <div style="text-align: center;">
             <strong>{row['nom_infrastructure']}</strong><br>
             Type: {row['type_infrastructure']}<br>
             Commune: {row['nom_commune']}<br>
-            Code Postal: {row['code_postal']}
+            Population: {population} habitants<br>
+            Équipements culturels pour 1000 hab.: {density}<br>
+            Code INSEE: {row['code_postal']}
         </div>
         """
 
@@ -138,7 +147,34 @@ def create_map(
             tooltip=tooltip_content,
         ).add_to(marker_cluster)
 
+    # Add marker cluster to map
     marker_cluster.add_to(m)
+
+    # Load heatmap data
+    try:
+        heatmap_data = pd.read_pickle("data/heatmap_data.pkl")
+
+        # Create heatmap layer
+        heatmap = plugins.HeatMap(
+            data=[
+                [row["latitude"], row["longitude"], row["cultural_density"]]
+                for _, row in heatmap_data.iterrows()
+            ],
+            name="Densité culturelle",
+            min_opacity=0.3,
+            max_opacity=0.8,
+            radius=25,
+            blur=15,
+            overlay=True,
+            control=True,
+            show=False,  # Hidden by default
+        )
+        heatmap.add_to(m)
+    except Exception as e:
+        print(f"Error loading heatmap data: {e}")
+
+    # Add layer control
+    folium.LayerControl().add_to(m)
 
     # Add legend with larger dots
     legend_html = """
@@ -155,6 +191,21 @@ def create_map(
                 {type_name}
             </div>
         """
+
+    # Add heatmap explanation to legend
+    legend_html += """
+        <hr style="margin: 10px 0;">
+        <h4 style="margin: 10px 0;">Densité culturelle</h4>
+        <div>Équipements pour 1000 habitants</div>
+        <div style="margin-top: 5px; display: flex; align-items: center;">
+            <div style="background: linear-gradient(to right, rgba(0,0,255,0.3), rgba(255,0,0,0.8)); 
+                        width: 100px; height: 20px; margin-right: 10px;"></div>
+            <div style="display: flex; justify-content: space-between; width: 100px;">
+                <span>Faible</span>
+                <span>Élevée</span>
+            </div>
+        </div>
+    """
     legend_html += "</div>"
     m.get_root().html.add_child(folium.Element(legend_html))
 
