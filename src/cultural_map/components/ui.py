@@ -2,6 +2,7 @@
 
 import streamlit as st
 from streamlit_folium import folium_static
+import plotly.graph_objects as go
 
 
 def setup_page():
@@ -40,10 +41,12 @@ def setup_page():
             transition: transform 0.3s ease-in-out !important;
             background-color: rgb(240, 242, 246) !important;
             z-index: 1000 !important;
+            overflow-y: auto !important;
         }
 
         [data-testid="stSidebar"] > div {
-            height: 100vh !important;
+            height: auto !important;
+            min-height: 100vh !important;
             width: 860px !important;
             padding: 2rem !important;
             background-color: rgb(240, 242, 246) !important;
@@ -198,6 +201,16 @@ def setup_page():
             padding: 5px !important;
         }
 
+        /* Visualization container */
+        .visualization-container {
+            max-width: 780px !important;
+            margin: 20px auto !important;
+            padding: 15px !important;
+            background: white !important;
+            border-radius: 8px !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        }
+
         /* Hide Streamlit branding */
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
@@ -242,8 +255,10 @@ def setup_page():
     )
 
 
-def create_sidebar(data, chat_placeholder):
-    """Create the sidebar with filters and chat interface."""
+def create_sidebar(
+    data, chat_placeholder, data_calculated_events=None, visualization_func=None
+):
+    """Create the sidebar with filters, chat interface, and visualization."""
     with st.sidebar:
         st.title("Filtres & Chat")
 
@@ -317,6 +332,26 @@ def create_sidebar(data, chat_placeholder):
                     {"role": "assistant", "content": message}
                 )
                 st.markdown(message)
+
+        # Add visualization if a commune is selected
+        if (
+            selected_commune
+            and data_calculated_events is not None
+            and visualization_func is not None
+        ):
+            st.markdown(
+                """<hr style='margin: 30px 0 !important;'>""", unsafe_allow_html=True
+            )
+            st.subheader("Visualisation de la Commune")
+
+            # Create visualization container
+            st.markdown('<div class="visualization-container">', unsafe_allow_html=True)
+
+            # Generate and display the visualization
+            fig = visualization_func(data_calculated_events, selected_commune)
+            st.plotly_chart(fig, use_container_width=True)
+
+            st.markdown("</div>", unsafe_allow_html=True)
 
         # Configuration expander at the bottom
         st.markdown(
