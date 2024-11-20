@@ -28,28 +28,74 @@ def setup_page():
             position: absolute !important;
             inset: 0 !important;
             overflow: hidden !important;
+            width: 100vw !important;
+            height: 100vh !important;
         }
 
         /* Sidebar styles */
+        .stSidebar.st-emotion-cache-a27nlo.eczjsme18 {
+            position: relative !important;
+            user-select: auto !important;
+            min-width: 800px !important;
+            max-width: 95vw !important;
+            height: auto !important;
+            box-sizing: border-box !important;
+            flex-shrink: 0 !important;
+            resize: horizontal !important;
+            overflow-x: auto !important;
+        }
+
+        /* Ensure parent containers don't restrict width */
+        .st-emotion-cache-ue6h4q, 
+        .st-emotion-cache-r421ms,
+        .st-emotion-cache-10trblm,
+        .st-emotion-cache-1dp5vir {
+            min-width: 800px !important;
+            max-width: 95vw !important;
+        }
+
         [data-testid="stSidebar"] {
             position: fixed !important;
             left: 0 !important;
             top: 0 !important;
             height: 100vh !important;
-            width: 860px !important;
+            min-width: 800px !important;
+            max-width: 95vw !important;
             transform: none !important;
-            transition: transform 0.3s ease-in-out !important;
+            transition: width 0.3s ease-in-out !important;
             background-color: rgb(240, 242, 246) !important;
             z-index: 1000 !important;
             overflow-y: auto !important;
+            resize: horizontal !important;
+            overflow-x: auto !important;
+        }
+
+        /* Target the actual content container */
+        [data-testid="stSidebar"] .block-container {
+            min-width: 800px !important;
+            width: 100% !important;
+            margin: 0 auto !important;
         }
 
         [data-testid="stSidebar"] > div {
             height: auto !important;
             min-height: 100vh !important;
-            width: 860px !important;
+            width: 100% !important;
             padding: 2rem !important;
             background-color: rgb(240, 242, 246) !important;
+        }
+
+        /* Remove any width restrictions from Streamlit's default classes */
+        div[data-testid="stSidebarUserContent"],
+        div.st-emotion-cache-10trblm,
+        div.st-emotion-cache-16idsys,
+        div.st-emotion-cache-1outpf3 {
+            width: auto !important;
+        }
+
+        /* Allow sidebar content to expand */
+        .element-container, .stMarkdown {
+            width: auto !important;
         }
 
         /* Hide all buttons in the sidebar */
@@ -61,36 +107,10 @@ def setup_page():
         [data-testid="stSidebar"] > button[kind="secondary"] {
             display: flex !important;
             position: absolute !important;
-            left: 860px !important;
+            right: 0 !important;
             top: 0 !important;
             border-top-left-radius: 0 !important;
             border-bottom-left-radius: 0 !important;
-        }
-
-        /* Hide navigation section */
-        section[data-testid="stSidebarNav"] {
-            display: none !important;
-        }
-
-        /* Collapsed sidebar */
-        [data-testid="stSidebar"][aria-expanded="false"] {
-            transform: translateX(-860px) !important;
-        }
-
-        /* Main content area */
-        .main .block-container {
-            position: fixed !important;
-            inset: 0 !important;
-            margin: 0 !important;
-            max-width: none !important;
-            width: 100vw !important;
-            transition: margin-left 0.3s ease-in-out !important;
-        }
-
-        /* Main content when sidebar is expanded */
-        [data-testid="stSidebar"][aria-expanded="true"] + .main .block-container {
-            margin-left: 860px !important;
-            width: calc(100vw - 860px) !important;
         }
 
         /* Map container */
@@ -111,9 +131,48 @@ def setup_page():
             display: block !important;
         }
 
+        /* Main content area */
+        .main .block-container {
+            position: fixed !important;
+            inset: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            max-width: none !important;
+            width: 100% !important;
+            height: 100vh !important;
+            transition: margin-left 0.3s ease-in-out !important;
+        }
+
+        /* Main content when sidebar is expanded */
+        [data-testid="stSidebar"][aria-expanded="true"] + .main .block-container {
+            margin-left: var(--sidebar-width, 800px) !important;
+            width: calc(100vw - var(--sidebar-width, 800px)) !important;
+        }
+
+        /* Ensure map container takes full space */
+        .stApp > .main .block-container [data-testid="stVerticalBlock"] {
+            height: 100vh !important;
+            width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .element-container:has(.stFolium) {
+            height: 100vh !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .stFolium {
+            height: 100vh !important;
+            width: 100% !important;
+        }
+
         /* Improved Sidebar Components Styling */
         .stSelectbox, .stMultiSelect {
-            max-width: 780px !important;
+            width: 100% !important;
+            max-width: calc(100% - 40px) !important;
             margin: 20px auto !important;
             padding: 10px !important;
             background: white !important;
@@ -154,7 +213,8 @@ def setup_page():
 
         /* Visualization container */
         .visualization-container {
-            max-width: 780px !important;
+            width: 100% !important;
+            max-width: calc(100% - 40px) !important;
             margin: 20px auto !important;
             padding: 15px !important;
             background: white !important;
