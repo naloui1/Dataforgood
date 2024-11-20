@@ -157,37 +157,101 @@ def setup_page():
             margin: 0 !important;
         }
 
-        .element-container:has(.stFolium) {
-            height: 100vh !important;
+        .element-container div[data-testid="column"] {
             width: 100% !important;
-            margin: 0 !important;
             padding: 0 !important;
         }
 
-        .stFolium {
-            height: 100vh !important;
-            width: 100% !important;
+        /* Remove any potential gaps */
+        .stApp > .main {
+            gap: 0 !important;
         }
 
-        /* Improved Sidebar Components Styling */
-        .stSelectbox, .stMultiSelect {
-            width: 100% !important;
-            max-width: calc(100% - 40px) !important;
-            margin: 20px auto !important;
-            padding: 10px !important;
-            background: white !important;
+        /* General styles for filter containers */
+        .categories-filter, .types-filter, .commune-filter {
+            margin: 1rem 0 !important;
+            padding: 0.5rem !important;
+            background: #f8fafc !important;
             border-radius: 8px !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
         }
 
-        /* Center labels and add spacing */
-        .stSelectbox label, .stMultiSelect label {
-            text-align: center !important;
+        /* Style for all filter labels */
+        .stMultiSelect > label, .stSelectbox > label {
+            font-size: 1.1rem !important;
+            font-weight: 600 !important;
+            color: #1e293b !important;
+            margin-bottom: 0.5rem !important;
             display: block !important;
-            margin-bottom: 12px !important;
-            font-weight: 700 !important;
-            font-size: 1.2em !important;
-            color: #1f2937 !important;
+        }
+
+        /* Style for multiselect boxes */
+        .stMultiSelect [data-baseweb="select"] {
+            font-size: 1rem !important;
+            background: white !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 6px !important;
+        }
+
+        /* Style for selected items in multiselect */
+        [data-baseweb="tag"] {
+            font-size: 0.95rem !important;
+            font-weight: 500 !important;
+            padding: 6px 12px !important;
+            margin: 3px !important;
+            border-radius: 6px !important;
+            background: #f1f5f9 !important;
+            border: 1px solid #cbd5e1 !important;
+        }
+
+        /* Style for tag text */
+        [data-baseweb="tag"] span {
+            color: #334155 !important;
+        }
+
+        /* Categories specific styles */
+        .categories-filter [data-baseweb="tag"] {
+            background: #e2e8f0 !important;
+            border-color: #94a3b8 !important;
+        }
+
+        /* Types specific styles - using more muted versions of the map colors for better contrast */
+        .types-filter [data-baseweb="tag"][title*="Monument"] { background: #fecaca !important; border-color: #e41a1c !important; }
+        .types-filter [data-baseweb="tag"][title*="Musée"] { background: #dbeafe !important; border-color: #377eb8 !important; }
+        .types-filter [data-baseweb="tag"][title*="Bibliothèque"] { background: #dcfce7 !important; border-color: #4daf4a !important; }
+        .types-filter [data-baseweb="tag"][title*="Théâtre"] { background: #f3e8ff !important; border-color: #984ea3 !important; }
+        .types-filter [data-baseweb="tag"][title*="Cinéma"] { background: #ffedd5 !important; border-color: #ff7f00 !important; }
+        .types-filter [data-baseweb="tag"][title*="Conservatoire"] { background: #fef9c3 !important; border-color: #ca8a04 !important; }
+        .types-filter [data-baseweb="tag"][title*="Scène"] { background: #fed7aa !important; border-color: #a65628 !important; }
+        .types-filter [data-baseweb="tag"][title*="Musique"] { background: #fce7f3 !important; border-color: #f781bf !important; }
+        .types-filter [data-baseweb="tag"][title*="Lieu archéologique"] { background: #f1f5f9 !important; border-color: #999999 !important; }
+        .types-filter [data-baseweb="tag"][title*="Service d'archives"] { background: #e0f2fe !important; border-color: #a6cee3 !important; }
+        .types-filter [data-baseweb="tag"][title*="Parc et jardin"] { background: #dcfce7 !important; border-color: #b2df8a !important; }
+        .types-filter [data-baseweb="tag"][title*="Espace protégé"] { background: #fee2e2 !important; border-color: #fb9a99 !important; }
+        .types-filter [data-baseweb="tag"][title*="Spectacle vivant"] { background: #fff7ed !important; border-color: #fdbf6f !important; }
+        .types-filter [data-baseweb="tag"][title*="Pluridisciplinaire"] { background: #f5f3ff !important; border-color: #cab2d6 !important; }
+        .types-filter [data-baseweb="tag"][title*="Cinéma, audiovisuel"] { background: #ffedd5 !important; border-color: #ff7f00 !important; }
+        .types-filter [data-baseweb="tag"][title*="Livre, littérature"] { background: #dcfce7 !important; border-color: #4daf4a !important; }
+
+        /* Ensure text is readable with dark color */
+        .types-filter [data-baseweb="tag"] span {
+            color: #1e293b !important;
+            font-weight: 500 !important;
+        }
+
+        /* Style for the commune select box */
+        .commune-filter .stSelectbox select {
+            font-size: 1rem !important;
+            padding: 0.5rem !important;
+            border-radius: 6px !important;
+            border-color: #e2e8f0 !important;
+            background-color: white !important;
+            color: #1e293b !important;
+        }
+
+        /* Hover states for better interactivity */
+        [data-baseweb="tag"]:hover {
+            filter: brightness(0.95) !important;
         }
 
         /* Style multiselect options - Categories */
@@ -195,15 +259,38 @@ def setup_page():
             background-color: #3b82f6 !important;
             border-radius: 4px !important;
             margin: 2px !important;
-            padding: 2px 8px !important;
+            padding: 4px 12px !important;
         }
 
         /* Style multiselect options - Types */
         .types-filter [data-baseweb="tag"] {
-            background-color: #10b981 !important;
             border-radius: 4px !important;
             margin: 2px !important;
-            padding: 2px 8px !important;
+            padding: 4px 12px !important;
+        }
+
+        /* Type-specific colors */
+        .types-filter [data-baseweb="tag"][title*="Monument"] { background-color: #e41a1c !important; }
+        .types-filter [data-baseweb="tag"][title*="Musée"] { background-color: #377eb8 !important; }
+        .types-filter [data-baseweb="tag"][title*="Bibliothèque"] { background-color: #4daf4a !important; }
+        .types-filter [data-baseweb="tag"][title*="Théâtre"] { background-color: #984ea3 !important; }
+        .types-filter [data-baseweb="tag"][title*="Cinéma"] { background-color: #ff7f00 !important; }
+        .types-filter [data-baseweb="tag"][title*="Conservatoire"] { background-color: #ffff33 !important; }
+        .types-filter [data-baseweb="tag"][title*="Scène"] { background-color: #a65628 !important; }
+        .types-filter [data-baseweb="tag"][title*="Musique"] { background-color: #f781bf !important; }
+        .types-filter [data-baseweb="tag"][title*="Lieu archéologique"] { background-color: #999999 !important; }
+        .types-filter [data-baseweb="tag"][title*="Service d'archives"] { background-color: #a6cee3 !important; }
+        .types-filter [data-baseweb="tag"][title*="Parc et jardin"] { background-color: #b2df8a !important; }
+        .types-filter [data-baseweb="tag"][title*="Espace protégé"] { background-color: #fb9a99 !important; }
+        .types-filter [data-baseweb="tag"][title*="Spectacle vivant"] { background-color: #fdbf6f !important; }
+        .types-filter [data-baseweb="tag"][title*="Pluridisciplinaire"] { background-color: #cab2d6 !important; }
+        .types-filter [data-baseweb="tag"][title*="Cinéma, audiovisuel"] { background-color: #ff7f00 !important; }
+        .types-filter [data-baseweb="tag"][title*="Livre, littérature"] { background-color: #4daf4a !important; }
+
+        /* Ensure text is readable on colored backgrounds */
+        .types-filter [data-baseweb="tag"] span {
+            color: white !important;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2) !important;
         }
 
         /* Style commune select */
