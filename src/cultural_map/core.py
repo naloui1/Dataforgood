@@ -4,7 +4,6 @@ import pandas as pd
 import streamlit as st
 from .components.ui import setup_page, create_sidebar, show_map
 from .components.map import create_map
-from .components.chat import process_chat_input
 from .components.visualisation import creating_vusualisation
 
 
@@ -51,12 +50,10 @@ def main():
     data = load_data()  ## pickle for the map
     data_calculated_events = load_calculated_events_data()  ## csv for the visualisation
 
-    # Create sidebar with filters and chat
+    # Create sidebar with filters and visualization
     selected_categories, selected_types, selected_commune = create_sidebar(
         data,
-        lambda prompt: process_chat_input(
-            prompt, data, None
-        ),  # Pass None since we don't need the map object for chat
+        None,  # Placeholder parameter to maintain function signature
         data_calculated_events,  # Pass the visualization data
         creating_vusualisation,  # Pass the visualization function
     )

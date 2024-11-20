@@ -152,55 +152,6 @@ def setup_page():
             border: 2px solid #8b5cf6 !important;
         }
 
-        /* Chat message styling */
-        .stChatMessage {
-            max-width: 780px !important;
-            margin: 10px 30px !important;
-            padding: 15px !important;
-            border-radius: 8px !important;
-            background: white !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-        }
-
-        /* Chat input container */
-        .stChatInputContainer {
-            max-width: 780px !important;
-            padding: 15px 30px !important;
-            background: white !important;
-            border-radius: 8px !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-            margin: 20px auto !important;
-        }
-
-        /* Configuration expander styling */
-        .streamlit-expanderHeader {
-            background-color: #f3f4f6 !important;
-            border-radius: 8px !important;
-            padding: 10px 15px !important;
-            margin: 10px 0 !important;
-            font-weight: 600 !important;
-        }
-
-        /* Title styling */
-        .sidebar .stTitle {
-            text-align: center !important;
-            color: #1f2937 !important;
-            font-size: 28px !important;
-            font-weight: 700 !important;
-            margin: 20px 0 !important;
-            padding: 10px !important;
-        }
-
-        /* Subheader styling */
-        .sidebar .stSubheader {
-            text-align: center !important;
-            color: #4b5563 !important;
-            font-size: 20px !important;
-            font-weight: 600 !important;
-            margin: 15px 0 !important;
-            padding: 5px !important;
-        }
-
         /* Visualization container */
         .visualization-container {
             max-width: 780px !important;
@@ -258,9 +209,9 @@ def setup_page():
 def create_sidebar(
     data, chat_placeholder, data_calculated_events=None, visualization_func=None
 ):
-    """Create the sidebar with filters, chat interface, and visualization."""
+    """Create the sidebar with filters and visualization."""
     with st.sidebar:
-        st.title("Filtres & Chat")
+        st.title("Filtres")
 
         # Create two columns for filters
         col1, col2 = st.columns(2)
@@ -304,35 +255,6 @@ def create_sidebar(
         )
         st.markdown("</div>", unsafe_allow_html=True)
 
-        # Add some space before the chat interface
-        st.markdown(
-            """<hr style='margin: 30px 0 !important;'>""", unsafe_allow_html=True
-        )
-        st.subheader("Chat Assistant")
-
-        # Move chat interface to sidebar
-        if "messages" not in st.session_state:
-            st.session_state.messages = []
-
-        # Display chat messages
-        for message in st.session_state.messages:
-            with st.chat_message(message["role"]):
-                st.markdown(message["content"])
-
-        # Chat input
-        if prompt := st.chat_input("Posez votre question..."):
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            with st.chat_message("user"):
-                st.markdown(prompt)
-
-            # Assistant response
-            with st.chat_message("assistant"):
-                message = chat_placeholder(prompt)
-                st.session_state.messages.append(
-                    {"role": "assistant", "content": message}
-                )
-                st.markdown(message)
-
         # Add visualization if a commune is selected
         if (
             selected_commune
@@ -352,17 +274,6 @@ def create_sidebar(
             st.plotly_chart(fig, use_container_width=True)
 
             st.markdown("</div>", unsafe_allow_html=True)
-
-        # Configuration expander at the bottom
-        st.markdown(
-            """<hr style='margin: 30px 0 !important;'>""", unsafe_allow_html=True
-        )
-        with st.expander("⚙️ Configuration"):
-            api_key = st.text_input(
-                "OpenAI API Key", type="password", key="openai_api_key"
-            )
-            if api_key:
-                st.success("API Key configured successfully!")
 
         return selected_categories, selected_types, selected_commune
 
