@@ -4,82 +4,41 @@ import pandas as pd
 import streamlit as st
 from .components.ui import setup_page, create_sidebar, show_map
 from .components.map import create_map
-from .components.chat import process_chat_input
+from .components.visualisation import creating_vusualisation
+
+
+@st.cache_data(show_spinner="Loading cultural data...")
+def load_data():
+    """Load the preprocessed cultural data."""
+    return pd.read_pickle("data/cultural_data.pkl")
 
 
 @st.cache_data
-def load_and_prepare_data():
-    """Load and prepare the cultural data with caching."""
-    # Load the new CSV file with specified dtypes
-    dtypes = {
-        "Nom commune principale": str,
-        "Code Postal": str,
-        "Type": str,
-        "Nom d'evenement": str,
-        "etb_latitude": str,  # Will be converted to float later
-        "etb_longtitude": str,  # Will be converted to float later
-    }
-
-    data = pd.read_csv(
-        "data/results/_WITH_data_union_AS_SELECT_libelle_geographique_AS_Nom_commune_p_202411201007.csv",
-        sep=";",
-        encoding="utf-8",
-        dtype=dtypes,
-        low_memory=False,
+def load_calculated_events_data():
+    """Load and cache the calculated events data."""
+    return pd.read_csv(
+        "data/results/nbre_equipement_parcommuneetcodepostal_ET_LatitudeLongitude_ET_POPULATION.csv",
+        sep="\t",
     )
 
-    # Define type mappings to categories
-    patrimoine_types = [
-        "Monument",
-        "Musée",
-        "Lieu archéologique",
-        "Service d'archives",
-        "Parc et jardin",
-        "Espace protégé",
-    ]
 
-    spectacle_vivant_types = [
-        "Théâtre",
-        "Cinéma",
-        "Bibliothèque",
-        "Conservatoire",
-        "Scène",
-        "Musique",
-        "Spectacle vivant",
-        "Pluridisciplinaire",
-        "Cinéma, audiovisuel",
-        "Livre, littérature",
-    ]
-
-    # Create DataFrame with required structure
-    transformed_data = pd.DataFrame(
-        {
-            "nom_commune": data["Nom commune principale"],
-            "code_postal": data["Code Postal"],
-            "type_infrastructure": data["Type"],
-            "nom_infrastructure": data["Nom d'evenement"],
-            "latitude": pd.to_numeric(
-                data["etb_latitude"].str.replace(",", "."), errors="coerce"
-            ),
-            "longitude": pd.to_numeric(
-                data["etb_longtitude"].str.replace(",", "."), errors="coerce"
-            ),
-        }
-    )
-
-    # Map types to categories
-    transformed_data["categorie"] = transformed_data["type_infrastructure"].apply(
-        lambda x: (
-            "patrimoine"
-            if x in patrimoine_types
-            else "spectacle_vivant" if x in spectacle_vivant_types else "patrimoine"
-        )  # Default to patrimoine for unknown types
-    )
-
-    # Drop rows with missing coordinates
-    transformed_data = transformed_data.dropna(subset=["latitude", "longitude"])
-
-    return transformed_data
+@st.cache_data(show_spinner=False)
+def filter_data(
+    data, selected_categories=None, selected_types=None, selected_commune=None
+):
+    """Filter data based on selections with caching."""
+    filtered_data = data.copy()
+    if selected_categories:
+        filtered_data = filtered_data[
+            filtered_data["categorie"].isin(selected_categories)
+        ]
+    if selected_types:
+        filtered_data = filtered_data[
+            filtered_data["type_infrastructure"].isin(selected_types)
+        ]
+    if selected_commune:
+        filtered_data = filtered_data[filtered_data["nom_commune"] == selected_commune]
+    return filtered_data
 
 
 def main():
@@ -87,20 +46,26 @@ def main():
     # Setup the page
     setup_page()
 
-    # Load and prepare data (now cached)
-    data = load_and_prepare_data()
+    # Load preprocessed data
+    data = load_data()  ## pickle for the map
+    data_calculated_events = load_calculated_events_data()  ## csv for the visualisation
 
-    # Create sidebar with filters and chat
+    # Create sidebar with filters and visualization
     selected_categories, selected_types, selected_commune = create_sidebar(
         data,
-        lambda prompt: process_chat_input(
-            prompt, data, None
-        ),  # Pass None since we don't need the map object for chat
+        None,  # Placeholder parameter to maintain function signature
+        data_calculated_events,  # Pass the visualization data
+        creating_vusualisation,  # Pass the visualization function
     )
 
-    # Create map with filters
+    # Filter data with caching
+    filtered_data = filter_data(
+        data, selected_categories, selected_types, selected_commune
+    )
+
+    # Create map with filtered data
     filtered_map = create_map(
-        data=data,
+        data=filtered_data,
         selected_categories=selected_categories,
         selected_types=selected_types,
         selected_commune=selected_commune,
