@@ -24,91 +24,48 @@ def create_map(
     Returns:
         folium.Map: The created map object
     """
-    # Set tighter bounds for France
-    sw = [42.333, -4.833]  # Southwest corner - adjusted north
-    ne = [51.2, 8.833]  # Northeast corner - adjusted west
+    # Set bounds for France
+    sw = [42.333, -4.833]  # Southwest corner
+    ne = [51.2, 8.833]  # Northeast corner
 
-    center_lat = (sw[0] + ne[0]) / 2
-    center_lon = (sw[1] + ne[1]) / 2
+    # Determine initial view
+    if selected_commune:
+        commune_data = data[data["nom_commune"] == selected_commune].iloc[0]
+        initial_location = [commune_data["latitude"], commune_data["longitude"]]
+        initial_zoom = 16  # Changed to zoom level 16 for ~300m scale view
+    else:
+        initial_location = [(sw[0] + ne[0]) / 2, (sw[1] + ne[1]) / 2]
+        initial_zoom = 7
 
-    # Create base map with center of France
+    # Create base map
     m = folium.Map(
-        location=[center_lat, center_lon],
-        zoom_start=7,
+        location=initial_location,
+        zoom_start=initial_zoom,
         tiles="CartoDB positron",
         min_zoom=6,
         max_zoom=18,
         dragging=True,
         scrollWheelZoom=True,
         control_scale=True,
-        zoomControl=False,  # Disable zoom control completely
+        zoomControl=True,
+        prefer_canvas=True,
     )
 
-    # Add strict bounds control and sidebar offset handling using custom JavaScript
+    # Add bounds control
     bounds_script = f"""
         var southWest = L.latLng({sw[0]}, {sw[1]});
         var northEast = L.latLng({ne[0]}, {ne[1]});
         var bounds = L.latLngBounds(southWest, northEast);
-        var sidebarWidth = 860;
         
-        // Initial setup
+        // Set bounds
         map.setMaxBounds(bounds);
-        map.options.minZoom = 6;
-        
-        // Function to calculate the offset based on sidebar state
-        function calculateOffset() {{
-            var sidebar = document.querySelector('[data-testid="stSidebar"]');
-            var isExpanded = sidebar.getAttribute('aria-expanded') !== 'false';
-            // When expanded, offset by 430px (half of sidebar width)
-            return isExpanded ? 430 : 0;
-        }}
-        
-        // Function to adjust center based on sidebar state
-        function adjustCenter(animate = true) {{
-            var offset = calculateOffset();
-            var mapWidth = map.getContainer().clientWidth;
-            var center = map.getCenter();
-            
-            // Convert center to pixels
-            var centerPoint = map.latLngToContainerPoint(center);
-            
-            // Calculate new center point with offset
-            var newCenterPoint = L.point(
-                centerPoint.x + offset,
-                centerPoint.y
-            );
-            
-            // Convert back to LatLng
-            var newCenter = map.containerPointToLatLng(newCenterPoint);
-            
-            if (animate) {{
-                map.panTo(newCenter, {{animate: true, duration: 0.3}});
-            }} else {{
-                map.setView(newCenter, map.getZoom(), {{animate: false}});
-            }}
-        }}
-        
-        // Watch for sidebar collapse/expand
-        var observer = new MutationObserver(function(mutations) {{
-            mutations.forEach(function(mutation) {{
-                if (mutation.target.getAttribute('aria-expanded') !== null) {{
-                    setTimeout(function() {{
-                        adjustCenter(true);
-                    }}, 50);
-                }}
-            }});
-        }});
-        
-        // Start observing the sidebar
-        var sidebar = document.querySelector('[data-testid="stSidebar"]');
-        observer.observe(sidebar, {{ attributes: true, attributeFilter: ['aria-expanded'] }});
         
         // Prevent dragging outside bounds
         map.on('drag', function() {{
             map.panInsideBounds(bounds, {{ animate: false }});
         }});
         
-        // Force bounds check and adjust center on any view change
+        // Force bounds check on any view change
         map.on('moveend', function() {{
             if (!bounds.contains(map.getCenter())) {{
                 var c = map.getCenter();
@@ -135,61 +92,15 @@ def create_map(
                 map.setZoom(6);
             }}
         }});
-        
-        // Initial center adjustment (delayed to ensure DOM is ready)
-        setTimeout(function() {{
-            adjustCenter(false);
-        }}, 300);
-        
-        // Adjust center when window is resized
-        window.addEventListener('resize', function() {{
-            setTimeout(function() {{
-                adjustCenter(false);
-            }}, 100);
-        }});
 
-        // Custom function to center on a point with offset
-        window.centerMapOnPoint = function(lat, lng, zoom) {{
-            // Get map dimensions
-            var mapHeight = map.getContainer().clientHeight;
-            var mapWidth = map.getContainer().clientWidth;
-            
-            // Calculate offsets
-            var horizontalOffset = calculateOffset();
-            var verticalOffset = mapHeight * 0.4; // Move point up by 40% of map height
-            
-            // Project the target point
-            var targetPoint = map.project([lat, lng], zoom);
-            
-            // Apply offsets
-            targetPoint.x = targetPoint.x - horizontalOffset;
-            targetPoint.y = targetPoint.y - verticalOffset;
-            
-            // Convert back to LatLng and set view
-            var targetLatLng = map.unproject(targetPoint, zoom);
-            map.setView(targetLatLng, zoom, {{animate: true, duration: 0.5}});
-        }};
+        // If a commune is selected, ensure we're at the correct zoom level
+        if ({selected_commune is not None}) {{
+            map.setZoom(16);  // Changed to zoom level 16 for ~300m scale view
+        }}
     """
 
     # Add the bounds control script
     m.get_root().script.add_child(folium.Element(bounds_script))
-
-    # If a commune is selected, zoom to it with a tighter view
-    if selected_commune:
-        commune_data = data[data["nom_commune"] == selected_commune].iloc[0]
-        lat, lon = commune_data["latitude"], commune_data["longitude"]
-
-        # Add JavaScript to center on the selected commune with offset
-        center_script = f"""
-            setTimeout(function() {{
-                window.centerMapOnPoint({lat}, {lon}, 17);
-            }}, 400);
-        """
-        m.get_root().script.add_child(folium.Element(center_script))
-
-    else:
-        # Set default bounds to France
-        m.fit_bounds([sw, ne])
 
     # Create marker cluster
     marker_cluster = plugins.MarkerCluster().add_to(m)
