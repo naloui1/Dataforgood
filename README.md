@@ -32,6 +32,9 @@ uv run streamlit run app.py
 
 L'application sera accessible à l'adresse : http://localhost:8501
 
+## Mind map
+- https://lucid.app/lucidspark/8e5176a1-7ab5-4476-b3c4-c64e9fc3202a/edit?invitationId=inv_8851fc4c-79e6-4a9d-acde-1809bb47f920
+
 ## 🎯 Fonctionnalités
 
 - **Carte Interactive** : Visualisation des sites culturels avec clustering

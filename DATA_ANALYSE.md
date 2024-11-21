@@ -2,22 +2,22 @@
 
 ----------------------------------------------------------
 
+*Les DATAs utilisés:*
+
 10. Base des lieux et équipements culturels (Basilic)
     a) base-des-lieux-et-des-equipements-culturels.csv
-    b) base-des-lieux-et-des-equipements-culturels.json
-    c) base-des-lieux-et-des-equipements-culturels.geojson
-    d) base-des-lieux-et-des-equipements-culturels.zip
-    e) Label et appellation.pdf
-    f) Métadonnées_baseDEPS.xlsx
 
 11. Liste des festivals en France
     a) festivals-global-festivals-_-pl.csv
-    b) festivals-global-festivals-_-pl.json
-    c) festivals-global-festivals-_-pl.geojson
-    d) festivals-global-festivals-_-pl.zip
 
 12. Liste des établissements cinématographiques actifs
-    a) Liste des établissements cinématographiques actifs
+    a) Liste des établissements cinématographiques actifs.csv
+
+2. Programme petites villes de demain - liste des villes bénéficiaires
+    a) programme-petites-villes-de-demain-liste-des-villes-beneficiaires.csv
+
+3. Population
+    a) Les résultats des recensements de la population.csv
 
 ----------------------------------------------------------
 
