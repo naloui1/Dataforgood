@@ -173,7 +173,6 @@ def create_map(
         heatmap.add_to(m)
     except Exception as e:
         print(f"Error loading heatmap data: {e}")
-
     # Add layer control
     folium.LayerControl().add_to(m)
 
