@@ -375,10 +375,10 @@ def create_sidebar(
         )
         # st.markdown("</div>", unsafe_allow_html=True)
 
-        # Add visualization if a commune is selected
+        # Add visualization anyway for all France or selected commume ##if a commune is selected
         if (
-            selected_commune
-            and data_calculated_events is not None
+            ##selected_commune
+            data_calculated_events is not None
             and visualization_func is not None
         ):
             st.markdown(
@@ -390,8 +390,14 @@ def create_sidebar(
             st.markdown('<div class="visualization-container">', unsafe_allow_html=True)
 
             # Generate and display the visualization
-            fig = visualization_func(data_calculated_events, selected_commune)
-            st.plotly_chart(fig, use_container_width=True)
+            try:
+                fig = visualization_func(data_calculated_events, selected_commune if selected_commune else None)
+                if fig is not None:
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.error("Error: Visualization could not be generated.")
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
 
             st.markdown("</div>", unsafe_allow_html=True)
 
