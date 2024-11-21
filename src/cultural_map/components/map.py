@@ -34,6 +34,7 @@ DEFAULT_STYLE = {"color": "#808080", "radius": 6}  # Gray
 # Add path to the new dataset
 CULTURAL_DENSITY_PATH = "data/results/Heatmap_Culture_with_score.csv"
 
+
 def sample_data_by_zoom(data, zoom_level):
     """Sample data based on zoom level to reduce markers."""
     # Progressive sampling rates from country to city level
@@ -176,33 +177,43 @@ def create_map(
 
         # Load and add cultural density scatter plot layer
         try:
-            cultural_density_data = pd.read_csv(CULTURAL_DENSITY_PATH, sep='\t')
-            
+            cultural_density_data = pd.read_csv(CULTURAL_DENSITY_PATH, sep="\t")
+
             # Create a feature group for the scatter plot
-            scatter_group = folium.FeatureGroup(name="Densité culturelle (cercles)", show=False)
-            
+            scatter_group = folium.FeatureGroup(
+                name="Densité culturelle (cercles)", show=False
+            )
+
             # Calculate size range for better visualization
-            max_facilities = cultural_density_data['nbr_total_culturel'].max()
-            min_facilities = cultural_density_data['nbr_total_culturel'].min()
-            
+            max_facilities = cultural_density_data["nbr_total_culturel"].max()
+            min_facilities = cultural_density_data["nbr_total_culturel"].min()
+
             # Calculate density range for color mapping
-            max_density = cultural_density_data['Nbre culturels pour1000 habitants'].max()
-            min_density = cultural_density_data['Nbre culturels pour1000 habitants'].min()
-            
+            max_density = cultural_density_data[
+                "Nbre culturels pour1000 habitants"
+            ].max()
+            min_density = cultural_density_data[
+                "Nbre culturels pour1000 habitants"
+            ].min()
+
             # Create color scale for density
             colormap = branca.colormap.LinearColormap(
-                colors=['blue', 'lime', 'yellow', 'red'],
+                colors=['#0C0786', '#6A00A8', '#B12A90', '#E16462', '#FCA636', '#F0F921'],  # plasma colormap colors
                 vmin=min_density,
-                vmax=max_density
+                vmax=max_density,
             )
 
             for _, row in cultural_density_data.iterrows():
-                facilities = row['nbr_total_culturel']
-                density = row['Nbre culturels pour1000 habitants']
-                
-                # Scale radius between 5 and 30 based on number of facilities
-                radius = 5 + (facilities - min_facilities) * (25 / (max_facilities - min_facilities))
-                
+                facilities = row["nbr_total_culturel"]
+                density = row["Nbre culturels pour1000 habitants"]
+
+                # Scale radius using square root to emphasize differences in lower values
+                # Base size of 1000m for single facility, scaling up with square root
+                radius = 1000 + 300 * np.sqrt(facilities)
+
+                # Cap the maximum radius at 3000m to keep large cities reasonable
+                radius = min(radius, 5000)
+
                 # Format tooltip information
                 tooltip_content = f"""
                 <div style="text-align: center;">
@@ -212,10 +223,10 @@ def create_map(
                     Densité culturelle: {density:.2f} pour 1000 hab.
                 </div>
                 """
-                
+
                 # Create circle with size based on total facilities and color based on density
-                folium.CircleMarker(
-                    location=[row['latitude'], row['longitude']],
+                folium.Circle(
+                    location=[row["latitude"], row["longitude"]],
                     radius=radius,
                     color=colormap(density),
                     fill=True,
@@ -225,14 +236,14 @@ def create_map(
                     opacity=0.8,
                     tooltip=tooltip_content,
                 ).add_to(scatter_group)
-            
+
             # Add the scatter group to the map
             scatter_group.add_to(m)
-            
+
             # Add colormap to the map
             colormap.add_to(m)
-            colormap.caption = 'Équipements culturels pour 1000 habitants'
-            
+            colormap.caption = "Équipements culturels pour 1000 habitants"
+
         except Exception as e:
             print(f"Error loading cultural density scatter data: {e}")
 
