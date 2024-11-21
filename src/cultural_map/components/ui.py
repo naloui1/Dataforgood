@@ -333,67 +333,62 @@ def create_sidebar(
             unsafe_allow_html=True,
         )
 
-        st.title("Filtres")
+        # Create tabs
+        tab_filters, tab_visualization = st.tabs(["Filtres", "Visualisation"])
 
-        # Create collapsible section for categories and types
-        with st.expander("Filtres avancés", expanded=False):
-            # Create two columns for filters
-            col1, col2 = st.columns(2)
+        with tab_filters:
+            # Create collapsible section for categories and types
+            with st.expander("Filtres avancés", expanded=False):
+                # Create two columns for filters
+                col1, col2 = st.columns(2)
 
-            with col1:
-                # Categories filter
-                st.markdown('<div class="categories-filter">', unsafe_allow_html=True)
-                categories = sorted(data["categorie"].unique())
-                selected_categories = st.multiselect(
-                    "Catégories",
-                    options=categories,
-                    default=categories,
-                    help="Sélectionnez une ou plusieurs catégories",
-                )
-                st.markdown("</div>", unsafe_allow_html=True)
+                with col1:
+                    # Categories filter
+                    st.markdown('<div class="categories-filter">', unsafe_allow_html=True)
+                    categories = sorted(data["categorie"].unique())
+                    selected_categories = st.multiselect(
+                        "Catégories",
+                        options=categories,
+                        default=categories,
+                        help="Sélectionnez une ou plusieurs catégories",
+                    )
+                    st.markdown("</div>", unsafe_allow_html=True)
 
-            with col2:
-                # Types filter with color coding
-                st.markdown('<div class="types-filter">', unsafe_allow_html=True)
-                types = sorted(data["type_infrastructure"].unique())
-                selected_types = st.multiselect(
-                    "Types d'infrastructure",
-                    options=types,
-                    default=types,
-                    help="Sélectionnez un ou plusieurs types",
-                )
-                st.markdown("</div>", unsafe_allow_html=True)
+                with col2:
+                    # Types filter with color coding
+                    st.markdown('<div class="types-filter">', unsafe_allow_html=True)
+                    types = sorted(data["type_infrastructure"].unique())
+                    selected_types = st.multiselect(
+                        "Types d'infrastructure",
+                        options=types,
+                        default=types,
+                        help="Sélectionnez un ou plusieurs types",
+                    )
+                    st.markdown("</div>", unsafe_allow_html=True)
 
-        # Commune filter (full width)
-        st.markdown('<div class="commune-filter">', unsafe_allow_html=True)
-        communes = sorted(data["nom_commune"].unique())
-        selected_commune = st.selectbox(
-            "Commune",
-            options=[""] + communes,
-            format_func=lambda x: "Toutes les communes" if x == "" else x,
-            help="Sélectionnez une commune spécifique",
-        )
-        st.markdown("</div>", unsafe_allow_html=True)
-
-        # Add visualization if a commune is selected
-        if (
-            selected_commune
-            and data_calculated_events is not None
-            and visualization_func is not None
-        ):
-            st.markdown(
-                """<hr style='margin: 30px 0 !important;'>""", unsafe_allow_html=True
+            # Commune filter (full width)
+            st.markdown('<div class="commune-filter">', unsafe_allow_html=True)
+            communes = sorted(data["nom_commune"].unique())
+            selected_commune = st.selectbox(
+                "Commune",
+                options=[""] + communes,
+                format_func=lambda x: "Toutes les communes" if x == "" else x,
+                help="Sélectionnez une commune spécifique",
             )
-            st.subheader("Visualisation de la Commune")
-
-            # Create visualization container
-            st.markdown('<div class="visualization-container">', unsafe_allow_html=True)
-
-            # Generate and display the visualization
-            fig = visualization_func(data_calculated_events, selected_commune)
-            st.plotly_chart(fig, use_container_width=True)
-
             st.markdown("</div>", unsafe_allow_html=True)
+
+        with tab_visualization:
+            if data_calculated_events is not None and visualization_func is not None:
+                if not selected_commune:
+                    st.info("Veuillez sélectionner une commune dans l'onglet Filtres pour voir sa visualisation.")
+                else:
+                    st.subheader("Visualisation de la Commune")
+                    # Create visualization container
+                    st.markdown('<div class="visualization-container">', unsafe_allow_html=True)
+                    # Generate and display the visualization
+                    fig = visualization_func(data_calculated_events, selected_commune)
+                    st.plotly_chart(fig, use_container_width=True)
+                    st.markdown("</div>", unsafe_allow_html=True)
 
         return selected_categories, selected_types, selected_commune
 
