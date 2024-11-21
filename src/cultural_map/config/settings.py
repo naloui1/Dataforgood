@@ -2,7 +2,7 @@
 
 # Page configuration
 PAGE_CONFIG = {
-    "page_title": "Carte Culturelle de France",
+    "page_title": "Carte Culturelle de France 🎭",
     "page_icon": "🎭",
     "layout": "wide",
     "initial_sidebar_state": "expanded"

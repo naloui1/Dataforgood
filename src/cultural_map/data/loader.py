@@ -6,7 +6,12 @@ import streamlit as st
 @st.cache_data
 def load_cultural_data():
     """Load and cache the cultural infrastructure data."""
-    return pd.read_csv("data/mock_cultural_data.csv")
+    return pd.read_csv("data/cultural_data.csv")
+
+@st.cache_data
+def load_heatmap_data():
+    """Load and cache the heatmap data."""
+    return pd.read_csv("data/heatmap_data.csv")
 
 def filter_data(df, selected_categories=None, selected_types=None, selected_commune=None):
     """
