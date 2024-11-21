@@ -31,6 +31,8 @@ TYPE_STYLES = {
 # Default style for unknown types
 DEFAULT_STYLE = {"color": "#808080", "radius": 6}  # Gray
 
+# Add path to the new dataset
+CULTURAL_DENSITY_PATH = "data/results/Heatmap_Culture_with_score.csv"
 
 def sample_data_by_zoom(data, zoom_level):
     """Sample data based on zoom level to reduce markers."""
@@ -155,13 +157,13 @@ def create_map(
     try:
         heatmap_data = load_heatmap_data()
 
-        # Create heatmap layer
+        # Create cultural density heatmap layer (original)
         heatmap = plugins.HeatMap(
             data=[
                 [row["latitude"], row["longitude"], row["cultural_density"]]
                 for _, row in heatmap_data.iterrows()
             ],
-            name="Densité culturelle",
+            name="Densité culturelle (heatmap)",
             min_opacity=0.3,
             max_opacity=0.8,
             radius=25,
@@ -171,8 +173,72 @@ def create_map(
             show=False,  # Hidden by default
         )
         heatmap.add_to(m)
+
+        # Load and add cultural density scatter plot layer
+        try:
+            cultural_density_data = pd.read_csv(CULTURAL_DENSITY_PATH, sep='\t')
+            
+            # Create a feature group for the scatter plot
+            scatter_group = folium.FeatureGroup(name="Densité culturelle (cercles)", show=False)
+            
+            # Calculate size range for better visualization
+            max_facilities = cultural_density_data['nbr_total_culturel'].max()
+            min_facilities = cultural_density_data['nbr_total_culturel'].min()
+            
+            # Calculate density range for color mapping
+            max_density = cultural_density_data['Nbre culturels pour1000 habitants'].max()
+            min_density = cultural_density_data['Nbre culturels pour1000 habitants'].min()
+            
+            # Create color scale for density
+            colormap = branca.colormap.LinearColormap(
+                colors=['blue', 'lime', 'yellow', 'red'],
+                vmin=min_density,
+                vmax=max_density
+            )
+
+            for _, row in cultural_density_data.iterrows():
+                facilities = row['nbr_total_culturel']
+                density = row['Nbre culturels pour1000 habitants']
+                
+                # Scale radius between 5 and 30 based on number of facilities
+                radius = 5 + (facilities - min_facilities) * (25 / (max_facilities - min_facilities))
+                
+                # Format tooltip information
+                tooltip_content = f"""
+                <div style="text-align: center;">
+                    <strong>{row['Commune']}</strong><br>
+                    Population: {int(row['Population_Totale']):,} habitants<br>
+                    Équipements culturels: {int(facilities)}<br>
+                    Densité culturelle: {density:.2f} pour 1000 hab.
+                </div>
+                """
+                
+                # Create circle with size based on total facilities and color based on density
+                folium.CircleMarker(
+                    location=[row['latitude'], row['longitude']],
+                    radius=radius,
+                    color=colormap(density),
+                    fill=True,
+                    fillColor=colormap(density),
+                    fillOpacity=0.7,
+                    weight=1,
+                    opacity=0.8,
+                    tooltip=tooltip_content,
+                ).add_to(scatter_group)
+            
+            # Add the scatter group to the map
+            scatter_group.add_to(m)
+            
+            # Add colormap to the map
+            colormap.add_to(m)
+            colormap.caption = 'Équipements culturels pour 1000 habitants'
+            
+        except Exception as e:
+            print(f"Error loading cultural density scatter data: {e}")
+
     except Exception as e:
         print(f"Error loading heatmap data: {e}")
+
     # Add layer control
     folium.LayerControl().add_to(m)
 
@@ -199,6 +265,19 @@ def create_map(
         <div>Équipements pour 1000 habitants</div>
         <div style="margin-top: 5px; display: flex; align-items: center;">
             <div style="background: linear-gradient(to right, rgba(0,0,255,0.3), rgba(255,0,0,0.8)); 
+                        width: 100px; height: 20px; margin-right: 10px;"></div>
+            <div style="display: flex; justify-content: space-between; width: 100px;">
+                <span>Faible</span>
+                <span>Élevée</span>
+            </div>
+        </div>
+    """
+    legend_html += """
+        <hr style="margin: 10px 0;">
+        <h4 style="margin: 10px 0;">Densité de population</h4>
+        <div>Population totale</div>
+        <div style="margin-top: 5px; display: flex; align-items: center;">
+            <div style="background: linear-gradient(to right, blue, lime, yellow, red); 
                         width: 100px; height: 20px; margin-right: 10px;"></div>
             <div style="display: flex; justify-content: space-between; width: 100px;">
                 <span>Faible</span>
